@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Wrangling | James Lamar Foster</title>
+    <link>/tag/data-wrangling/</link>
+      <atom:link href="/tag/data-wrangling/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Wrangling</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu35d9b5ac466b3d46e99e4f358e0d4601_5065_512x512_fill_lanczos_center_2.png</url>
+      <title>Data Wrangling</title>
+      <link>/tag/data-wrangling/</link>
+    </image>
+    
+    <item>
+      <title>High School Graduation</title>
+      <link>/project/high-school-graduation/</link>
+      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/project/high-school-graduation/</guid>
+      <description>&lt;p&gt;I used public secondary data to visualize the difference in 4-year graduation rate for males and females attending two two similar high schools in the Pacific Northwest. Before creating these plots I combined five different data frames (years 2015-2019) of high school graduation in the entire state of Washington. After combining the data frames, I wrangled the data using dplyr from the tidyverse package in R. After filtering the dataframe to only capture my desired observations, I then used ggplot2 to create this graph. If you&amp;rsquo;re interested in the code I used to generate this plot, feel free to click the code button above. I created several different plots with this data.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+
+[[main]]
+name = "CV"
+url = "https://www.dropbox.com/s/dp1uuiydj4kk8md/Foster%2C%20J.L.%20CV.docx?dl=0"
+weight = 20
+
+[[main]]
+  name = "Experience"
+  url = "#experience"
+  weight = 30
+  
+[[main]]
+  name = "Additional Training"
+  url = "#accomplishments"
+  weight = 40
+  
+[[main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 50
+
+[[main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 60
+
+[[main]]
+  name = "Publications"
+  url = "#featured"
+  weight = 70
+
+[[main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 80
+
+

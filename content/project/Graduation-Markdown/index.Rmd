@@ -1,0 +1,99 @@
+---
+title: 4-Year Graduation Rate of Two High Schools
+author: Foster, J.L.
+date: 2019-03-25T00:00:00Z
+summary: Visualization of the graduation rate of two similar high schools
+tags:
+- Visualization 
+- School Outcomes
+image:
+  caption: Photo by  Jostens
+  focal_point: Smart
+---
+I used public secondary data to visualize the difference in 4-year graduation rate for males and females attending two two similar high schools in the Pacific Northwest. Before creating these plots I combined five different data frames (years 2015-2019) of high school graduation in the entire state of Washington. After combining the data frames, I wrangled the data using dplyr from the tidyverse package in R. After filtering the dataframe to only capture my desired observations, I then used ggplot2 to create the graph, gganimate to animate the plots, and cowplot to make a multipanel plot of the two plots for ease of comparison.
+
+```{r, message=FALSE}
+#Packages I will use to graph the data
+library(tidyverse)
+library(ggrepel)
+library(scales)
+library(gganimate)
+library(cowplot)
+```
+
+```{r, message=FALSE}
+#Reading in Data
+WAGrad15 <- read_csv("WAGrad14-15.csv")
+WAGrad16 <- read_csv("WAGrad15-16.csv")
+WAGrad17 <- read_csv("WAGrad16-17.csv")
+WAGrad18 <- read_csv("WAGrad17-18.csv")
+WAGrad19 <- read_csv("WAGrad18-19.csv")
+```
+
+```{r}
+WAGrad <- bind_rows(WAGrad15, WAGrad16, WAGrad17, WAGrad18, WAGrad19)
+```
+
+```{r, include= FALSE}
+SPS <-  filter(WAGrad, DistrictName == "Seattle School District #1", Cohort == 'Four Year')
+```
+
+```{r, include= FALSE}
+SPS_Cut <- filter(SPS, !grepl('Non',StudentGroup))
+SPS_Cut2 <- filter(SPS_Cut, !grepl('Students without',StudentGroup))
+```
+
+```{r, include= FALSE}
+SPS_Cut3 <- select(SPS_Cut2,-c(ESDName,DistrictOrganizationId,CurrentSchoolType,Suppression,DataAsOf,TransferOut, Year1Dropout,Year2Dropout,Year3Dropout,Year4Dropout,Year5Dropout,Year6Dropout,Year7Dropout,SchoolOrganizationId,ESDOrganizationId,SchoolOrganizationid,ESDOrganizationID))
+```
+
+```{r, include= FALSE}
+SPS_Cut4 <- filter(SPS_Cut3, OrganizationLevel == "School")
+```
+
+```{r}
+#Using dplyr to wrangle the data to the exct data I want to graph
+ ###I did several other filters witht this data
+GBHS <- filter(SPS_Cut4, SchoolName %in% c("Ballard High School", "Garfield High School"), StudentGroupType %in% c("Race", "Gender", "All"))
+```                 
+
+```{r}
+
+##Garfield and Ballard Overall Graduation Rate 
+GBHS_Overall <- filter(GBHS, StudentGroupType %in% c("All", "Gender"))
+
+##Ballard High School
+BHS_Overall <- filter(GBHS,SchoolName %in% c("Ballard High School"),  StudentGroupType %in% c("Gender"))
+
+##Garfield High School 
+GHS_Overall <- filter(GBHS,SchoolName %in% c("Garfield High School"),  StudentGroupType %in% c("Gender"))
+
+```
+
+```{r}
+##Animated Graduation rate for Ballard High School
+ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c("center","top"), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color="black", size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, "lines"), panel.spacing.y=unit(.5, "lines")) + labs(x="\nGraduation Year", y= "Graduation Rate Percentage\n", title = "Garfield High School") + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c("red4", "navy")) + geom_point() +  transition_reveal(SchoolYear)
+
+```
+
+```{r}
+##Animated Graduation rate for Ballard High School
+ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c("center","top"), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color="black", size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, "lines"), panel.spacing.y=unit(.5, "lines")) + labs(x="\nGraduation Year", y= "Graduation Rate Percentage\n", title = "Ballard High School") + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c("red4", "navy")) + geom_point() + transition_reveal(SchoolYear)
+```
+
+```{r}
+G <- ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(0,.9),legend.justification=  c("center","top"), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color="black", size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = "grey", size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, "lines"), panel.spacing.y=unit(.5, "lines")) + labs(x="\nGraduation Year", y= NULL, title = "Garfield High School") + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c("red4", "navy")) + geom_point() + theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+
+```
+
+```{r}
+B <- ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = "none", legend.key = element_blank(),legend.box.background = element_rect(color="black", size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = "grey", size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, "lines"), panel.spacing.y=unit(.5, "lines")) + labs(x="\nGraduation Year", y= "Graduation Rate Percentage\n", title = "Ballard High School") + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c("red4", "navy")) + geom_point() + theme(panel.border = element_blank())
+```
+
+```{r}
+#Multipanel Graph with Cowplot
+plot_grid(B, G)
+```
+

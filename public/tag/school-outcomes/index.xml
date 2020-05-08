@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>School Outcomes | James Lamar Foster</title>
+    <link>/tag/school-outcomes/</link>
+      <atom:link href="/tag/school-outcomes/index.xml" rel="self" type="application/rss+xml" />
+    <description>School Outcomes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu35d9b5ac466b3d46e99e4f358e0d4601_5065_512x512_fill_lanczos_center_2.png</url>
+      <title>School Outcomes</title>
+      <link>/tag/school-outcomes/</link>
+    </image>
+    
+    <item>
+      <title>4-Year Graduation Rate of Two High Schools</title>
+      <link>/project/graduation-markdown/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/project/graduation-markdown/</guid>
+      <description>
+
+
+&lt;p&gt;I used public secondary data to visualize the difference in 4-year graduation rate for males and females attending two two similar high schools in the Pacific Northwest. Before creating these plots I combined five different data frames (years 2015-2019) of high school graduation in the entire state of Washington. After combining the data frames, I wrangled the data using dplyr from the tidyverse package in R. After filtering the dataframe to only capture my desired observations, I then used ggplot2 to create the graph, gganimate to animate the plots, and cowplot to make a multipanel plot of the two plots for ease of comparison.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Packages I will use to graph the data
+library(tidyverse)
+library(ggrepel)
+library(scales)
+library(gganimate)
+library(cowplot)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Reading in Data
+WAGrad15 &amp;lt;- read_csv(&amp;quot;WAGrad14-15.csv&amp;quot;)
+WAGrad16 &amp;lt;- read_csv(&amp;quot;WAGrad15-16.csv&amp;quot;)
+WAGrad17 &amp;lt;- read_csv(&amp;quot;WAGrad16-17.csv&amp;quot;)
+WAGrad18 &amp;lt;- read_csv(&amp;quot;WAGrad17-18.csv&amp;quot;)
+WAGrad19 &amp;lt;- read_csv(&amp;quot;WAGrad18-19.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WAGrad &amp;lt;- bind_rows(WAGrad15, WAGrad16, WAGrad17, WAGrad18, WAGrad19)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Using dplyr to wrangle the data to the exct data I want to graph
+ ###I did several other filters witht this data
+GBHS &amp;lt;- filter(SPS_Cut4, SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;, &amp;quot;Garfield High School&amp;quot;), StudentGroupType %in% c(&amp;quot;Race&amp;quot;, &amp;quot;Gender&amp;quot;, &amp;quot;All&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Garfield and Ballard Overall Graduation Rate 
+GBHS_Overall &amp;lt;- filter(GBHS, StudentGroupType %in% c(&amp;quot;All&amp;quot;, &amp;quot;Gender&amp;quot;))
+
+##Ballard High School
+BHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))
+
+##Garfield High School 
+GHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Garfield High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
+ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() +  transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-10-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
+ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-11-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;G &amp;lt;- ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(0,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= NULL, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;B &amp;lt;- ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = &amp;quot;none&amp;quot;, legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(panel.border = element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Multipanel Graph with Cowplot
+plot_grid(B, G)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

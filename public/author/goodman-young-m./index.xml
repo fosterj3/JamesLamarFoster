@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Goodman-Young, M. | James Lamar Foster</title>
+    <link>/author/goodman-young-m./</link>
+      <atom:link href="/author/goodman-young-m./index.xml" rel="self" type="application/rss+xml" />
+    <description>Goodman-Young, M.</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu35d9b5ac466b3d46e99e4f358e0d4601_5065_512x512_fill_lanczos_center_2.png</url>
+      <title>Goodman-Young, M.</title>
+      <link>/author/goodman-young-m./</link>
+    </image>
+    
+    <item>
+      <title>Data Dashboard Implementation - A Review of the Research Literature</title>
+      <link>/publication/dashboard-report/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/dashboard-report/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
