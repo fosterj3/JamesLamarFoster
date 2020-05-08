@@ -5,12 +5,12 @@ date: 2019-05-07T00:00:00Z
 summary: Visualization of OSPI COVID Communication
 tags:
 - Visualization 
-- COVID
+- COVID-19
 image:
   caption: Photo by Ivan Aleksic on Unsplash
   focal_point: Smart
 ---
-In this project, I made two timelines with the same data using two different timline packages - timevis and vistime
+In this project, I made two timelines with the same data using two different timline packages - timevis and vistime. On this website I only show the vistime timeline due to compatability issues. 
 ```{r, message = F}
 library(tidyverse)
 library(timevis)
@@ -48,7 +48,7 @@ df1 <- df %>%
   arrange(Date)
 ```
 
-```{r, include = T}
+```{r}
 #Create timeline with timevis
 df2 <- data.frame(
   id = 1:17,
@@ -92,7 +92,7 @@ df2 <- data.frame(
 
 ```
 
-```{r}
+```{r, include= F}
 timevis(df2)
 ```
 
