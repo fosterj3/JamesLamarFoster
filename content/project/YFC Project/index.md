@@ -7,7 +7,6 @@ categories: []
 tags:
   - Equity
   - Qualitative Methods
-  - School Improvement
 summary: 'Youth Participatory Action Research to spur collective action'
 authors: []
 external_link: ''
