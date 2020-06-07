@@ -24,15 +24,24 @@ date_format = "Jan 2006"
   location = "University of Washington "
   date_start = "2020-09-25"
   date_end = ""
-  description = """
+  description = "
   Responsibilities include:
   
   * Advocacy & Support
   * Outreach & Recruitment
   * Program Development & Management
   * Administration 
-  """
+  "
 
+[[experience]]
+  title = "Research Assistant"
+  company = "Center for Evaluation & Research for STEM Equity"
+  company_url = "http://depts.washington.edu/cerse/"
+  location = "University of Washington"
+  date_start = "2020-06-15"
+  date_end = ""
+  description = "Contributed to high quality data collection, data management, and analysis; managed assigned research and evaluation tasks, analyzed quantitative and qualitative data; managed assigned data collection tasks, including creating and distributing surveys and compiling data from a number of participating institutions; worked collaboratively with  staff on other related projects as needed; maintained organized project files and coordinate with collaborators within and outside of organization"
+  
 [[experience]]
   title = "Research Assistant"
   company = "Systems Leadership for Math Improvement"
