@@ -2,7 +2,7 @@
 title: "I Have a Dream Too"
 author: ~
 date: '2020-06-07'
-slug: blogging
+slug: 
 categories: []
 tags: 
 - Racism
