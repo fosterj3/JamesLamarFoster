@@ -17,6 +17,7 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
   title = "Graduate Student Assistant"
   company = "Office of Student Diversity and Inclusion"
@@ -24,14 +25,14 @@ date_format = "Jan 2006"
   location = "University of Washington "
   date_start = "2020-09-25"
   date_end = ""
-  description = "
+  description = """
   Responsibilities include:
   
   * Advocacy & Support
   * Outreach & Recruitment
   * Program Development & Management
   * Administration 
-  "
+  """
 
 [[experience]]
   title = "Research Assistant"
@@ -40,7 +41,7 @@ date_format = "Jan 2006"
   location = "University of Washington"
   date_start = "2020-06-15"
   date_end = ""
-  description = "Contributed to high quality data collection, data management, and analysis; managed assigned research and evaluation tasks, analyzed quantitative and qualitative data; managed assigned data collection tasks, including creating and distributing surveys and compiling data from a number of participating institutions; worked collaboratively with  staff on other related projects as needed; maintained organized project files and coordinate with collaborators within and outside of organization"
+  description = """Contributed to high quality data collection, data management, and analysis; managed assigned research and evaluation tasks, analyzed quantitative and qualitative data; managed assigned data collection tasks, including creating and distributing surveys and compiling data from a number of participating institutions; worked collaboratively with  staff on other related projects as needed; maintained organized project files and coordinate with collaborators within and outside of organization"""
   
 [[experience]]
   title = "Research Assistant"
@@ -49,7 +50,7 @@ date_format = "Jan 2006"
   location = "University of Washington"
   date_start = "2019-09-25"
   date_end = "2020-06-25"
-  description = "Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"
+  description = """Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"""
 
 [[experience]]
   title = "Research Consultant"
