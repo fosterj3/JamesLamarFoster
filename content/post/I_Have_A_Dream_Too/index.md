@@ -13,11 +13,10 @@ authors: []
 lastmod: ''
 featured: no
 image:
-  caption: ''
+  caption: 'Photo by Sonder Quest on Unsplash'
   focal_point: ''
   preview_only: no
 projects: []
-output: md_document
 ---
 “What's the price for a black man life?
 I check the toe tag, not one zero in sight
