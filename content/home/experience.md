@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   location = "University of Washington "
   date_start = "2020-09-25"
   date_end = ""
-  description = "incoming Fall 2020""
+  description = """
   Responsibilities include:
   
   * Advocacy & Support
