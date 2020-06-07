@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company = "Office of Student Diversity and Inclusion"
   company_url = "https://education.uw.edu/admissions/osdi"
   location = "University of Washington "
-  date_start = "2020-09-25"
+  date_start = "incoming Fall 2020"
   date_end = ""
   description = """
   Responsibilities include:
