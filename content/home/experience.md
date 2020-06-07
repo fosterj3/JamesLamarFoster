@@ -23,9 +23,9 @@ date_format = "Jan 2006"
   company = "Office of Student Diversity and Inclusion"
   company_url = "https://education.uw.edu/admissions/osdi"
   location = "University of Washington "
-  date_start = "incoming Fall 2020"
+  date_start = "2020-09-25"
   date_end = ""
-  description = """
+  description = "incoming Fall 2020""
   Responsibilities include:
   
   * Advocacy & Support
@@ -49,7 +49,7 @@ date_format = "Jan 2006"
   company_url = "https://www.education.uw.edu/slmi/"
   location = "University of Washington"
   date_start = "2019-09-25"
-  date_end = "2020-06-25"
+  date_end = "2020-07-15"
   description = """Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"""
 
 [[experience]]
