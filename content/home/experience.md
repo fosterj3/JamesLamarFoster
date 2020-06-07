@@ -40,7 +40,7 @@ date_format = "Jan 2006"
   location = "University of Washington"
   date_start = "2019-09-25"
   date_end = "2020-06-25"
-  description = """Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"""
+  description = "Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"
 
 [[experience]]
   title = "Research Consultant"

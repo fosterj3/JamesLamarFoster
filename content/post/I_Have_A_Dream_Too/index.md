@@ -5,7 +5,6 @@ date: '2020-06-07'
 slug: blogging
 categories: []
 tags: 
-- Writing
 - Racism
 subtitle: ''
 summary: How racism can defer dreams
