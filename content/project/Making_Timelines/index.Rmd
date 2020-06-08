@@ -1,10 +1,10 @@
 ---
-title: Washington state Department of Education COVID-19 Communication
-author: Foster, J.L.
-date: 2019-05-07T00:00:00Z
+title: "Washington state Department of Education COVID-19 Communication"
+author: "Foster, J.L."
+date: '2019-05-07T00:00:00Z'
 summary: Visualization of OSPI COVID Communication
 tags:
-- Visualization 
+- Visualization
 - COVID-19
 image:
   caption: Photo by Ivan Aleksic on Unsplash
@@ -92,7 +92,7 @@ df2 <- data.frame(
 
 ```
 
-```{r, include= F}
+```{r, include= T}
 timevis(df2)
 ```
 
@@ -103,6 +103,5 @@ timevis(df2)
 df3 <-  data.frame(event = Title, start = Date, group = Source)
 
 vistime(df3, title = "Washington State COVID-19 Response Timeline",  optimize_y = F, show_labels = F)
-
 ```
 
