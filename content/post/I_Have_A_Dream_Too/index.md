@@ -6,7 +6,7 @@ slug: dream
 categories: []
 tags: []
 subtitle: ''
-summary: ''
+summary: 'racism defering dreams'
 authors: []
 lastmod: '2020-06-07T18:32:18-07:00'
 featured: no
