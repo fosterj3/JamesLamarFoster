@@ -1,15 +1,14 @@
 ---
-title: "I Have a Dream Too"
+title: I Have a Dream Too
 author: ~
 date: '2020-06-07'
-slug: 
+slug: dream
 categories: []
-tags: 
-- Racism
+tags: []
 subtitle: ''
-summary: How racism can defer dreams
+summary: ''
 authors: []
-lastmod: ''
+lastmod: '2020-06-07T18:32:18-07:00'
 featured: no
 image:
   caption: 'Photo by Sonder Quest on Unsplash'
