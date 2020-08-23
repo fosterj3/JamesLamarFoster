@@ -19,22 +19,6 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Graduate Student Assistant"
-  company = "Office of Student Diversity and Inclusion"
-  company_url = "https://education.uw.edu/admissions/osdi"
-  location = "University of Washington "
-  date_start = "2020-09-25"
-  date_end = ""
-  description = """
-  Responsibilities include:
-  
-  * Advocacy & Support
-  * Outreach & Recruitment
-  * Program Development & Management
-  * Administration 
-  """
-
-[[experience]]
   title = "Research Assistant"
   company = "Center for Evaluation & Research for STEM Equity"
   company_url = "http://depts.washington.edu/cerse/"
@@ -42,6 +26,16 @@ date_format = "Jan 2006"
   date_start = "2020-06-15"
   date_end = ""
   description = """Contributed to high quality data collection, data management, and analysis; managed assigned research and evaluation tasks, analyzed quantitative and qualitative data; managed assigned data collection tasks, including creating and distributing surveys and compiling data from a number of participating institutions; worked collaboratively with  staff on other related projects as needed; maintained organized project files and coordinate with collaborators within and outside of organization"""
+  
+
+[[experience]]
+  title = "Research Assistant"
+  company = "Teacher Quality and Teacher Education"
+  company_url = ""
+  location = "University of Washington"
+  date_start = "2020-06-15"
+  date_end = ""
+  description = """Conducted qualitative analysis of hundreds of pages of documents to determine themes and patterns across the documents. Analyzed a consortium of universities’ efforts to implement data dashboards to improve their teacher preparation programs, helped universities improve their implementation efforts. Collaborated with researchers to produce a scholarly paper about data dashboard implementation in higher education"""
   
 [[experience]]
   title = "Research Assistant"
