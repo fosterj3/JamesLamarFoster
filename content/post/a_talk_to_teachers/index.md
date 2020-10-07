@@ -2,7 +2,7 @@
 title: A Talk to Teachers
 author: ~
 date: '2020-10-06'
-slug: blogging
+slug: 
 categories: []
 tags: 
 - Teaching
