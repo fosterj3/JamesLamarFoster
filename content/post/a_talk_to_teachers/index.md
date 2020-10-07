@@ -9,7 +9,7 @@ tags:
 - Criticality
 - Education
 subtitle: Lessons from Baldwin for Today
-summary: What can James Baldwin Teach educators during today's political and racial climate?
+summary: A lesson for today from Baldwin
 authors: []
 lastmod: '2020-10-06T19:51:14-07:00'
 featured: no
