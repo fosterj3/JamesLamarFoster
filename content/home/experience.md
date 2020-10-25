@@ -34,7 +34,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "University of Washington"
   date_start = "2020-06-15"
-  date_end = ""
+  date_end = "2020-09-30"
   description = """Conducted qualitative analysis of hundreds of pages of documents to determine themes and patterns across the documents. Analyzed a consortium of universities’ efforts to implement data dashboards to improve their teacher preparation programs, helped universities improve their implementation efforts. Collaborated with researchers to produce a scholarly paper about data dashboard implementation in higher education"""
   
 [[experience]]
@@ -53,5 +53,5 @@ date_format = "Jan 2006"
   location = ""
   date_start = "2017-09-25"
   date_end = "2019-06-25"
-  description = """Worked with several educational intermediary organizations to develop and disseminate tools to assist principals with their leadership practices"""
+  description = "Independently gathered school district data to create a crosswalk in Excel that illustrated to stakeholders the differences in school principal standards. Created and managed an exhaustive database designed to support district leaders working to improve how they recruit, support, and retain school leaders. Collaborated on a mixed-methods research study on effective implementation of school reforms resulting in an authored [book](https://www.nassp.org/store/product/35881180/) published by National Association for Secondary Principals"
 +++

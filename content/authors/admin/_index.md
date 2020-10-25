@@ -19,7 +19,7 @@ interests:
 - School Leadership
 - Critical Theory
 - Organizational Theory
-- Student Wellbeing
+- Student Well-being
  
 organizations:
 - name: University of Washington
