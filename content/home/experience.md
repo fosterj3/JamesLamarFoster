@@ -19,7 +19,7 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Research Assistant"
+  title = "Data Analyst"
   company = "Center for Evaluation & Research for STEM Equity"
   company_url = "http://depts.washington.edu/cerse/"
   location = "University of Washington"
@@ -47,7 +47,7 @@ date_format = "Jan 2006"
   description = """Collected and analyzed data using qualitative techniques and softwares such as Dedoose. Assisted in scholarly writing and presenting findings to educational stakeholders"""
 
 [[experience]]
-  title = "Research Consultant"
+  title = "Research Scientist"
   company = "Education Research & Development, LLC"
   company_url = "https://edrd.org/"
   location = ""
