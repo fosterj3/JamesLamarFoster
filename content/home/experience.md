@@ -19,7 +19,7 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Junior Research Scientist"
+  title = "Researcher"
   company = "Center for Evaluation & Research for STEM Equity"
   company_url = "http://depts.washington.edu/cerse/"
   location = "University of Washington"
