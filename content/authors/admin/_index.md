@@ -7,7 +7,7 @@ education:
   - course: PhD in Educational Policy, Organizations, and Leadership
     institution: University of Washington
     year: in progress
-  - course: M.S.Ed. in Program Evaluation
+  - course: M.S.Ed. in Statistics & Evaluation
     institution: Duquesne University
     year: 
   - course: M.S.Ed. in Child Psychology
