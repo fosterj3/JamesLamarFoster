@@ -9,7 +9,7 @@ tags:
 - Education
 - SEL
 subtitle: ''
-summary: 
+summary: Let's be humans instead or robots
 authors: []
 lastmod: "`r format(Sys.time(), '%d %B, %Y')`"
 featured: no
