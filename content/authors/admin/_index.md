@@ -1,7 +1,7 @@
 ---
 title: "James Lamar Foster"
 bio: My research interests include race and equity, school leadership, and student
-  wellbeing.
+  well-being.
 education:
   courses:
   - course: PhD in Educational Policy, Organizations, and Leadership
