@@ -9,7 +9,7 @@ tags:
 - Education
 - SEL
 subtitle: ''
-summary: Let's be humans instead or robots
+summary: Let's be humans instead of robots
 authors: []
 lastmod: "`r format(Sys.time(), '%d %B, %Y')`"
 featured: no
@@ -29,4 +29,4 @@ Many of the school leaders I talked to use an SEL curriculum called RULER that i
 
 The school leader I spoke to acknowledged and understood that school is about kids, it’s not about grades, it’s not about being in the yellow quadrant, it’s not about following rules. As I sat back and thought about what I was learning from these school leaders, I got a glimpse of how the US’ capitalistic society has damned everything including our children’s education. As the US continues to innovate and produce new technologies to make our lives’ easier by asking Google or Alexa to turn on our lights or tell us a story, we devolved in our ability to talk to one another and show empathy because we’ve learned to do those things in the context of getting a task done. 
 
-For us to thrive as a society, we can’t continue down the path of viewing emotional regulation as a means to an end, emotional regulation is the end. Emotional intelligence must be the goal. Maybe it’s okay if you or your student is in the Red, maybe it’s okay if you’re in the Blue and feel like spending your day being comforted by your pets or speaking to your family. But, for it to be ok, we have to as a society realize that feeling is a good thing. Being human is a good thing. Let’s all try to be less more like a robot and more like a human.
+For us to thrive as a society - we can’t continue down the path of viewing emotional regulation as a means to an end - emotional regulation must be the end. Emotional intelligence must be the goal. Maybe it’s okay if you or your student is in the Red, maybe it’s okay if you’re in the Blue and feel like spending your day being comforted by your pets or speaking to your family. But, for it to be ok, we have to as a society realize that feeling is a what makes us human. Being human is a good thing. Let’s all try to be less like a robot and more like a human.
