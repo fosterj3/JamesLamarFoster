@@ -6,6 +6,7 @@ slug: cops-and-robbers
 categories: []
 tags: 
 - Race
+- Education
 subtitle: ''
 summary: 'Growing up Black'
 authors: []
