@@ -11,12 +11,12 @@ tags:
 subtitle: ''
 summary: Let's be humans instead of robots
 authors: []
-lastmod: "`r format(Sys.time(), '%d %B, %Y')`"
+lastmod: '2020-11-29T19:51:14-07:00'
 featured: no
-image: 
-  caption: 'Photo by Rock'n Roll Monkey via Unsplash.com'
+image:
+  caption: ''
   focal_point: ''
-  preview_only: no
+  preview_only: yes
 projects: []
 ---
 The Robots are here! No, I’m not talking about Asimov’s conception of robots running the world or the Will Smith movie, I Robot, which is based on Asimov’s writing (for my millennial readers). When I say, “the robots are here,” I’m not referring to automation taking over everyday jobs causing massive unemployment and people having to learn new skills to keep up with the changing technology. When I say, “the robots are here,” I’m referring to the person you see every morning when you look in the mirror. Yes, that’s right, you and I are the robots!

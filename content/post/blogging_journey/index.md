@@ -11,7 +11,7 @@ tags:
 subtitle: ''
 summary: The beginning of my blogging journey 
 authors: []
-lastmod: '`r format(Sys.time(), '%d %B, %Y')`'
+lastmod: 
 featured: no
 image:
   caption: ''
