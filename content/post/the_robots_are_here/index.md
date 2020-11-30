@@ -14,7 +14,7 @@ authors: []
 lastmod: "`r format(Sys.time(), '%d %B, %Y')`"
 featured: no
 image: 
-  caption: ''
+  caption: 'Photo by Rock'n Roll Monkey via Unsplash.com'
   focal_point: ''
   preview_only: no
 projects: []
