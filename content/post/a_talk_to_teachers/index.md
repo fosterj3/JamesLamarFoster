@@ -17,7 +17,7 @@ featured: no
 image:
   caption: ''
   focal_point: ''
-  preview_only: yes
+  preview_only: no
 projects: []
 ---
 These tumultuous times have renewed my interest in reading and listening to more Black scholars who have experienced and written about hardships in the United States. I find myself going back to the writings of James Baldwin for clarity and understanding. Baldwin quenches my thirst for needing to make sense of today's political and racial climate and my role as an educator. I turn to Baldwin because I know he will tell it to me straight, he won’t bite his tongue nor soften his tone in his writing. I know that each time I read Baldwin; he will give me the unfiltered truth without any equivocation. To help me make sense of my role in education in today's climate, I turned to Baldwin’s "A Talk to Teachers." Despite this talk being over 50 years old, first given in 1963, educators have plenty to glean from this talk. 
