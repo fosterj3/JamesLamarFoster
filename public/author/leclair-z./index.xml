@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LeClair, Z. | James Lamar Foster</title>
-    <link>/author/leclair-z./</link>
-      <atom:link href="/author/leclair-z./index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/author/leclair-z./</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/author/leclair-z./index.xml" rel="self" type="application/rss+xml" />
     <description>LeClair, Z.</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>LeClair, Z.</title>
-      <link>/author/leclair-z./</link>
+      <link>https://jameslamarfoster.netlify.app/author/leclair-z./</link>
     </image>
     
     <item>
       <title>Network for School Improvement (NSI) Final Report - State of the Field</title>
-      <link>/publication/nsi-report/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/nsi-report/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/nsi-report/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/nsi-report/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantitative Methods | James Lamar Foster</title>
-    <link>/tag/quantitative-methods/</link>
-      <atom:link href="/tag/quantitative-methods/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/tag/quantitative-methods/</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/tag/quantitative-methods/index.xml" rel="self" type="application/rss+xml" />
     <description>Quantitative Methods</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Quantitative Methods</title>
-      <link>/tag/quantitative-methods/</link>
+      <link>https://jameslamarfoster.netlify.app/tag/quantitative-methods/</link>
     </image>
     
     <item>
       <title>PowerTeach-ing Evaluation</title>
-      <link>/project/powerteaching/</link>
+      <link>https://jameslamarfoster.netlify.app/project/powerteaching/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/project/powerteaching/</guid>
+      <guid>https://jameslamarfoster.netlify.app/project/powerteaching/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Decades of research suggests that students of lower socioeconomic status (SES) and students of color obtain lower math scores than their peers (Anyon, 1980; Lubienski, 2002; Strutchens &amp;amp; Silver, 2000). To ameliorate this problem, several reforms have been designed and implemented. One of the several reforms has been PowerTeaching. This study seeks to evaluate the effectiveness of PowerTeaching to raise math scores for students of color in low SES. The results from this study indicate that PowerTeaching did not yield significant results in raising students’ math scores.&lt;/p&gt;
 </description>

@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>School Leadership | James Lamar Foster</title>
-    <link>/tag/school-leadership/</link>
-      <atom:link href="/tag/school-leadership/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/tag/school-leadership/</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/tag/school-leadership/index.xml" rel="self" type="application/rss+xml" />
     <description>School Leadership</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>School Leadership</title>
-      <link>/tag/school-leadership/</link>
+      <link>https://jameslamarfoster.netlify.app/tag/school-leadership/</link>
     </image>
     
     <item>
       <title>Leadership and SEL (Under Review)</title>
-      <link>/publication/caring-journal-article/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/caring-journal-article/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What the Research Shows - Building Ranks in Action</title>
-      <link>/publication/nassp-book/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/nassp-book/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/nassp-book/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/nassp-book/</guid>
       <description></description>
     </item>
     

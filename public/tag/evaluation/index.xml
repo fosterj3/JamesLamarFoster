@@ -2,23 +2,1267 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evaluation | James Lamar Foster</title>
-    <link>/tag/evaluation/</link>
-      <atom:link href="/tag/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/tag/evaluation/</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/tag/evaluation/index.xml" rel="self" type="application/rss+xml" />
     <description>Evaluation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Evaluation</title>
-      <link>/tag/evaluation/</link>
+      <link>https://jameslamarfoster.netlify.app/tag/evaluation/</link>
     </image>
     
     <item>
       <title>PowerTeach-ing Evaluation</title>
-      <link>/project/powerteaching/</link>
+      <link>https://jameslamarfoster.netlify.app/project/powerteaching/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/project/powerteaching/</guid>
+      <guid>https://jameslamarfoster.netlify.app/project/powerteaching/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Decades of research suggests that students of lower socioeconomic status (SES) and students of color obtain lower math scores than their peers (Anyon, 1980; Lubienski, 2002; Strutchens &amp;amp; Silver, 2000). To ameliorate this problem, several reforms have been designed and implemented. One of the several reforms has been PowerTeaching. This study seeks to evaluate the effectiveness of PowerTeaching to raise math scores for students of color in low SES. The results from this study indicate that PowerTeaching did not yield significant results in raising students’ math scores.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>State University Youth Initiative District</title>
+      <link>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</guid>
+      <description> 
+
+&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;hr /&gt;
+&lt;div id=&#34;key-takeaways&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Key Takeaways&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Youth Initiative District students make steady gains in reading and math in elementary and middle school but tend to regress in high school.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;On average, Youth Initiative District students miss 12 days of instruction. Most of the absenteeism is occurring at the high school level.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Male students of color in high school are experiencing the lowest amount of RIT math growth.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary-of-findings&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Summary of Findings&lt;/h1&gt;
+&lt;p&gt;The State University Youth Initiative District (SUYI) is comprised of 881 students across 16 schools consisting of elementary, middle, and high school students. SUYI is rich in diversity; there are 13 different races/ethnicities, over 10 primary languages, and a host of other characteristics that make this a rich community of students. Unfortunately, many SUYI students struggle with absenteeism and declining MAP Growth Rasch UnIT (RIT) scores.&lt;/p&gt;
+&lt;p&gt;A student is considered “chronically absent” when they miss 10% or more days of instruction in one academic school year (Childs &amp;amp; Lofton, 2021). Chronic absenteeism can lead to students missing important instructional time, ultimately causing students to fall behind in their academics. Furthermore, when students miss school, they also miss important social interaction times that develop their interpersonal skills. According to this analysis, SUYI students miss an average of 12 days of instruction, which is about 7% of the school year in Washington State. High School students make up for the majority of the days missed, with New Futures Alternative, Cascade High School, and Olympic High School having the highest median of absenteeism (20-48 missed days). On the other hand, elementary school students account for the least amount of absences. Horizon, Franklin, and Valley Elementary have the lowest amount of students missing school (4-6 missed days).&lt;/p&gt;
+&lt;p&gt;RIT scores range from about 100–300. According to Joi Converse (2016), third-grade students usually score at the 180–200 level and progress to the 220–260 level by high school. SUYI elementary students fall within the usual RIT score range and make considerable gains in middle school. However, gains begin to slow down and in some cases regress for high school students. Declines in math RIT scores occurred from fall to winter for high school students, particularly male students of color. Most of these declines may be coming from Cascade High School and New Futures Alternative. In terms of actual scores, the average high school reading and math score was below 220. More specifically, the average spring RIT score in math was below 220.&lt;/p&gt;
+&lt;p&gt;Based on this analysis, more attention needs to be given to male high school students of color with a primary focus on their math achievement. However, that achievement may not improve if high school students continue to miss school. Further analysis should be done to measure the statistical significance of students missing school on their academic achievement and the characteristics of students who are missing school and performing low in math. Lastly, caution should be taken with how much emphasis is given to RIT scores. Several scholars have noted inherent bias and lack of cultural awareness in standardized tests.&lt;/p&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;References:&lt;/h4&gt;
+&lt;p&gt;Childs, J., &amp;amp; Lofton, R. (2021). Masking attendance: How education policy distracts from the wicked problem (s) of chronic absenteeism. Educational Policy, 35(2), 213-234.&lt;/p&gt;
+&lt;p&gt;Converse, J. (2016, October 25). Six commonly used MAP Growth terms worth knowing. NWEA. &lt;a href=&#34;https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/&#34; class=&#34;uri&#34;&gt;https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Note: all of the data in this project is fictitious
+# SUYI Schools and Students&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-8&#34;&gt;Table 1: &lt;/span&gt;Total Number of Students in the State University Youth Initiative District
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Jackson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+18.5% (163)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Horizon Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17.9% (158)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Lincoln Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+15.9% (140)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Monroe Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+8.2% (72)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+King K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+6.1% (54)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kennedy Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.4% (48)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Spring Crest Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.4% (48)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Valley Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.2% (46)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21st Century K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3.9% (34)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+New Future Alternative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3.0% (26)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Johnson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.7% (24)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Sound View Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.6% (23)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Olympic High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.6% (14)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Franklin Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.5% (13)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Cascade High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.0% (9)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Union Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.0% (9)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+100.0% (881)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-8&#34;&gt;Table 1: &lt;/span&gt;Elementary Schools (K-5)
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Lincoln Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+33.3% (140)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Monroe Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+17.1% (72)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kennedy Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.4% (48)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Spring Crest Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.4% (48)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Valley Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.0% (46)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+King K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+7.6% (32)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21st Century K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.0% (21)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Franklin Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3.1% (13)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+100.0% (420)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-8&#34;&gt;Table 1: &lt;/span&gt;Middle Schools (6-8)
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Horizon Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+69.3% (158)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Sound View Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+10.1% (23)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+King K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9.6% (22)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21st Century K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+5.7% (13)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Union Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3.9% (9)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+New Future Alternative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.3% (3)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+100.0% (228)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-8&#34;&gt;Table 1: &lt;/span&gt;High Schools (9-12)
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Jackson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+70.0% (163)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Johnson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+10.3% (24)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+New Future Alternative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9.9% (23)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Olympic High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+6.0% (14)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Cascade High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3.9% (9)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;
+100.0% (233)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suyi-student-demographics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;SUYI Student Demographics&lt;/h1&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-9&#34;&gt;Table 2: &lt;/span&gt;Students’ Sex
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Group
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Sex
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SUYI
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Female
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+35.9% (316)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SUYI
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+38.5% (339)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SUYI-Focus
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Female
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+13.2% (116)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SUYI-Focus
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Male
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+12.5% (110)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-10&#34;&gt;Table 3: &lt;/span&gt;Students’ Racial Identity
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Racial Identity
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+African American/Black
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+48.8% (430)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Chinese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+13.5% (119)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Vietnamese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.5% (101)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+White
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+11.0% (97)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Other American Indian
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+9.4% (83)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Filipino
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.4% (21)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Other Asian
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.8% (16)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Japanese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.5% (4)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Alaska Native
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.3% (3)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Asian Indian
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2% (2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Korean
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2% (2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Samoan
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2% (2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Cambodian
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.1% (1)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-11&#34;&gt;Table 4: &lt;/span&gt;Students’ Primary Language (Ten most spoken)
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Primary Language
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent (Total)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Somali
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+25.2% (126)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Spanish
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21.0% (105)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Vietnamese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+18.0% (90)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Cantonese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+14.8% (74)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Oromo (Ethiopia)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+6.0% (30)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Amharic
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+4.2% (21)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Toishanese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+4.2% (21)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Tigrinya (Tigrigna)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.6% (13)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Mandarin
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2.4% (12)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Tagalog
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1.6% (8)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-12&#34;&gt;Table 5: &lt;/span&gt;Bilingual Students
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Total
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+295
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+33.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-13&#34;&gt;Table 6: &lt;/span&gt;Students Experiencing Homelessness
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Total
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Percent
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+60
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.81
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suyi-absenteeism&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;SUYI Absenteeism&lt;/h1&gt;
+&lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-14&#34;&gt;Table 7: &lt;/span&gt;School Absenteeism
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Median
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+12.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+118
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-15&#34;&gt;Table 8: &lt;/span&gt;Elementary School Absenteeism
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Median
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+King K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+12.78
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+67.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21st Century K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.93
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+23.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Monroe Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10.13
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+68.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Kennedy Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7.88
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+29.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Lincoln Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.89
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+38.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Spring Crest Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10.24
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+57.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Franklin Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5.42
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Valley Elementary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.51
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-16&#34;&gt;Table 9: &lt;/span&gt;Middle School Absenteeism
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Median
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+New Future Alternative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+15.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+23.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+21.67
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+27.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Union Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+20.39
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+54.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+King K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10.57
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+30.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Sound View Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+15.46
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+66.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+21st Century K-8 School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+9.65
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+26.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Horizon Middle School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8.83
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+59.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-17&#34;&gt;Table 10: &lt;/span&gt;High School Absenteeism
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+School
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Median
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;position: sticky; top:0; background-color: #FFFFFF;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+New Future Alternative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+48.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+47.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+117.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Cascade High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+38.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+103.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Olympic High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+20.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+30.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+94.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Johnson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+13.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+20.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+70.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Jackson High School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+14.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+85.5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;map-growth-rasch-unit-rit-scores&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;MAP Growth Rasch UnIT (RIT) Scores&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rit-growth-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;RIT Growth Plots&lt;/h1&gt;
+&lt;div id=&#34;reading&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reading&lt;/h2&gt;
+&lt;div id=&#34;elementary-schools&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Elementary Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;middle-schools&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Middle Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;high-schools&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;High Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;math&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Math&lt;/h2&gt;
+&lt;div id=&#34;elementary-schools-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Elementary Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;middle-schools-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Middle Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;high-schools-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;High Schools&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     

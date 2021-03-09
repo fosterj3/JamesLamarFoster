@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Literature Review | James Lamar Foster</title>
-    <link>/tag/literature-review/</link>
-      <atom:link href="/tag/literature-review/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/tag/literature-review/</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/tag/literature-review/index.xml" rel="self" type="application/rss+xml" />
     <description>Literature Review</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Literature Review</title>
-      <link>/tag/literature-review/</link>
+      <link>https://jameslamarfoster.netlify.app/tag/literature-review/</link>
     </image>
     
     <item>
       <title>Data Dashboard Implementation - A Review of the Research Literature</title>
-      <link>/publication/dashboard-report/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/dashboard-report/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/dashboard-report/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/dashboard-report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What the Research Shows - Building Ranks in Action</title>
-      <link>/publication/nassp-book/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/nassp-book/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/nassp-book/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/nassp-book/</guid>
       <description></description>
     </item>
     

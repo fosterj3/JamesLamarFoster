@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Peck, C. | James Lamar Foster</title>
-    <link>/author/peck-c./</link>
-      <atom:link href="/author/peck-c./index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jameslamarfoster.netlify.app/author/peck-c./</link>
+      <atom:link href="https://jameslamarfoster.netlify.app/author/peck-c./index.xml" rel="self" type="application/rss+xml" />
     <description>Peck, C.</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Peck, C.</title>
-      <link>/author/peck-c./</link>
+      <link>https://jameslamarfoster.netlify.app/author/peck-c./</link>
     </image>
     
     <item>
       <title>Data Dashboard Implementation - A Review of the Research Literature</title>
-      <link>/publication/dashboard-report/</link>
+      <link>https://jameslamarfoster.netlify.app/publication/dashboard-report/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/dashboard-report/</guid>
+      <guid>https://jameslamarfoster.netlify.app/publication/dashboard-report/</guid>
       <description></description>
     </item>
     
