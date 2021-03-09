@@ -1,0 +1,688 @@
+--- 
+title: 'State University Youth Initiative District'
+author: 'James Lamar Foster, Ph.D. Candidate'
+date: "March 4, 2021"
+output:
+    rmdformats::readthedown
+--- 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#clear memory
+rm(list = ls())
+#penalize excessive significant figures
+options(digits = 3)
+#preventing scientific notation
+options(scipen = 10)
+
+#packages used in this analysis, will install packages if not installed
+if(!require(knitr)){
+    install.packages("knitr", dependencies = TRUE)
+    library(knitr)
+}
+if(!require(tidyverse)){
+    install.packages("tidyverse", dependencies = TRUE)
+    library(tidyverse)
+}
+if(!require(haven)){
+    install.packages("haven", dependencies = TRUE)
+    library(haven)
+}
+if(!require(janitor)){
+    install.packages("janitor", dependencies = TRUE)
+    library(janitor)
+}
+
+if(!require(ggthemes)){
+    install.packages("ggthemes", dependencies = TRUE)
+    library(ggthemes)
+}
+
+if(!require(readxl)){
+    install.packages("readxl", dependencies = TRUE)
+    library(readxl)
+}
+
+library(RColorBrewer)
+library(ggalt)
+library(ggrepel)
+library(kableExtra)
+library(waffle)
+```
+
+```{r set_knitr_chunk_options, echo=FALSE, message=FALSE}
+#set global output chunk options
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, collapse = F, highlight = F, results = "asis")
+```
+
+```{r, message = F, warning=FALSE}
+# Import Data
+data <- read_xlsx("interview_data.xlsx")
+
+#setting theme and centering the titles for ggplots
+theme_set(theme_classic())
+```
+
+```{r}
+# A little bit of cleaning
+
+## Remove empty columns 
+data <- clean_names(data) %>% 
+  remove_empty(which = c("rows", "cols"), quiet = TRUE) 
+
+##Rename columns 
+data <- data %>% 
+rename(
+ latinx =  ethnicity_desc_p,
+ race = race_desc_p,
+ homeless = is_homeless, 
+ school = school_name2010,
+ gpa = gpa2014, 
+ bilingual = bilg2014,
+ fall_math = x2013fall_math_rit,
+ winter_math = x2014wtr_math_rit,
+ spring_math = x2014spr_math_rit,
+ fall_reading = x2013fall_read_rit,
+ winter_reading = x2014wtr_read_rit,
+ spring_reading = x2014spr_read_rit,
+ suyi = suyi_focus_students
+ )
+
+#Turn some character values to numbers 
+data$latinx <- if_else(data$latinx == "Hispanic/Latino", 1, 0)
+data$sex <- recode(data$sex, "M" = "Male", "F" = "Female")
+data$homeless <- recode(data$homeless, "N" = 0, "Y" = 1)
+data$sped <- recode(data$sped, "N" = 0, "Y" = 1)
+data$bilingual <- recode(data$bilingual, "N" = 0, "Y" = 1)
+data$suyi <- recode(data$suyi, "1" = "SUYI-Focus", "0" = "SUYI")
+
+# Growth Index for math and reading 
+data <- data %>% 
+  mutate(math_growth = spring_math - fall_math ) %>% 
+  mutate(reading_growth = spring_reading - fall_reading) 
+
+data <- data %>% hablar::retype() 
+
+# Treat some variables as factors 
+data$suyi <- as.factor(data$suyi)
+data$sped <- as.factor(data$sped)
+data$race <- as.factor(data$race)
+data$school <- as.factor(data$school)
+
+# Turn NAs in home language variable to English 
+#Turn NAs to zero for Race and Ethnicity Columns
+data <- data %>%
+  mutate_at(vars(home_language, primary_language), ~replace_na(., "English"))
+
+
+#Make dataset of only variables used for analysis 
+df <- data %>% select(-c(suyi_zone, status2014, withdraw_date, proj_grad_year))
+
+#Create "Grade Level" column 
+df <- df %>% 
+mutate(grade_level =
+         case_when(grade %in% c("1", "2", "3", "4", "5", "K") ~ "elementary",
+                   grade %in% c("6", "7", "8")  ~ "middle",
+                   grade %in% c("9", "10", "11", "12") ~ "high school"))
+
+#Make grade_level a factor
+df$grade_level <- factor(df$grade_level, 
+                         levels = c("elementary", "middle", "high school"), 
+                         labels = c("elementary", "middle", "high school"))
+
+df_long <- pivot_longer(df, cols = fall_math:spring_reading) %>% 
+  separate(name, c("semester", "subject"), sep = "_") %>% 
+  rename(rit_score = value) 
+
+
+#Make elementary, middle, and hs data frames 
+elem <- df %>% filter(grade_level == "elementary")
+middle <- df %>% filter(grade_level == "middle")
+hs <- df %>% filter(grade_level == "high school")
+
+#Make semester a factor
+df_long$semester <- factor(df_long$semester, 
+                         levels = c("fall", "winter", "spring"), 
+                         labels = c("fall", "winter", "spring"))
+```
+
+```{r}
+#Create smaller data frame for dumbbell viz
+
+## Summarize Mean by School
+mean_math <- df %>% 
+  group_by(school, grade_level) %>% 
+  summarise(mean_fall_math = mean(fall_math, na.rm = T),
+            mean_spring_math = mean(spring_math, na.rm = T))
+
+mean_read <- df %>% 
+  group_by(school,grade_level) %>% 
+  summarise(mean_fall_reading = mean(fall_reading, na.rm = T),
+            mean_spring_reading = mean(spring_reading, na.rm = T))
+
+## Turn summaries into a dataframe
+mean_math <- as.data.frame(mean_math)
+mean_read <- as.data.frame(mean_read)
+
+## Create a Mean difference column 
+mean_math <- mean_math %>% 
+  mutate(mean_math_diff = round(mean_spring_math - mean_fall_math,2)) 
+
+mean_read <- mean_read %>% 
+  mutate(mean_reading_diff = round(mean_spring_reading - mean_fall_reading,2)) 
+```
+ 
+```{r}
+# Create Mean_Read and Mean_Math datasets for each grade level 
+
+## Math
+elem_mean_math <- mean_math %>% filter(grade_level == "elementary") %>% arrange(desc(mean_math_diff))
+middle_mean_math <- mean_math %>% filter(grade_level == "middle") %>% arrange(desc(mean_math_diff))
+hs_mean_math <- mean_math %>% filter(grade_level == "high school") %>% arrange(desc(mean_math_diff))
+
+
+## Reading 
+elem_mean_reading <- mean_read %>% filter(grade_level == "elementary") %>% arrange(desc(mean_reading_diff))
+middle_mean_reading <- mean_read %>% filter(grade_level == "middle") %>% arrange(desc(mean_reading_diff))
+hs_mean_reading <- mean_read %>% filter(grade_level == "high school") %>% arrange(desc(mean_reading_diff))
+```
+ 
+```{r}
+# Order School variable by mean reading difference variable
+
+## Reading
+elem_mean_reading$school <- fct_reorder(elem_mean_reading$school, elem_mean_reading$mean_reading_diff, max)
+
+middle_mean_reading$school <- fct_reorder(middle_mean_reading$school, middle_mean_reading$mean_reading_diff, max)
+
+hs_mean_reading$school <- fct_reorder(hs_mean_reading$school, hs_mean_reading$mean_reading_diff, max)
+
+
+## Math
+elem_mean_math$school <- fct_reorder(elem_mean_math$school, elem_mean_math$mean_math_diff, max)
+
+middle_mean_math$school <- fct_reorder(middle_mean_math$school, middle_mean_math$mean_math_diff, max)
+
+hs_mean_math$school <- fct_reorder(hs_mean_math$school, hs_mean_math$mean_math_diff, max)
+```
+
+```{r}
+#For waffle plot
+homeless <- c(Homeless = 7, `Not Homeless`= 93)
+bilingual <- c(Bilingual = 34, Monolingual= 66)
+```
+
+---
+
+# Key Takeaways 
+
+1. Youth Initiative District students make steady gains in reading and math in elementary and middle school but tend to regress in high school. 
+
+2. On average, Youth Initiative District students miss 12 days of instruction. Most of the absenteeism is occurring at the high school level.
+
+3. Male students of color in high school are experiencing the lowest amount of RIT math growth.
+
+# Summary of Findings
+
+The State University Youth Initiative District (SUYI) is comprised of 881 students across 16 schools consisting of elementary, middle, and high school students. SUYI is rich in diversity; there are 13 different races/ethnicities, over 10 primary languages, and a host of other characteristics that make this a rich community of students. Unfortunately, many SUYI students struggle with absenteeism and declining MAP Growth Rasch UnIT (RIT) scores. 
+
+A student is considered "chronically absent" when they miss 10% or more days of instruction in one academic school year (Childs & Lofton, 2021). Chronic absenteeism can lead to students missing important instructional time, ultimately causing students to fall behind in their academics. Furthermore, when students miss school, they also miss important social interaction times that develop their interpersonal skills. According to this analysis, SUYI students miss an average of 12 days of instruction, which is about 7% of the school year in Washington State. High School students make up for the majority of the days missed, with New Futures Alternative, Cascade High School, and Olympic High School having the highest median of absenteeism (20-48 missed days). On the other hand, elementary school students account for the least amount of absences. Horizon, Franklin, and Valley Elementary have the lowest amount of students missing school (4-6 missed days). 
+
+RIT scores range from about 100–300. According to Joi Converse (2016), third-grade students usually score at the 180–200 level and progress to the 220–260 level by high school. SUYI elementary students fall within the usual RIT score range and make considerable gains in middle school. However, gains begin to slow down and in some cases regress for high school students. Declines in math RIT scores occurred from fall to winter for high school students, particularly male students of color. Most of these declines may be coming from Cascade High School and New Futures Alternative. In terms of actual scores, the average high school reading and math score was below 220. More specifically, the average spring RIT score in math was below 220.  
+
+Based on this analysis, more attention needs to be given to male high school students of color with a primary focus on their math achievement. However, that achievement may not improve if high school students continue to miss school. Further analysis should be done to measure the statistical significance of students missing school on their academic achievement and the characteristics of students who are missing school and performing low in math. Lastly, caution should be taken with how much emphasis is given to RIT scores. Several scholars have noted inherent bias and lack of cultural awareness in standardized tests. 
+    
+
+#### References: 
+
+Childs, J., & Lofton, R. (2021). Masking attendance: How education policy distracts from the wicked problem (s) of chronic absenteeism. Educational Policy, 35(2), 213-234.
+
+Converse, J. (2016, October 25). Six commonly used MAP Growth terms worth knowing. NWEA. https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/
+
+
+# SUYI Schools and Students
+
+```{r}
+table <- data %>%
+  group_by(School = school) %>%
+  summarise("Total" = n()) %>%
+  arrange(desc(Total)) %>% 
+  adorn_totals("row") %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns() 
+
+
+kable(table, caption= "Total Number of Students in the State University Youth Initiative District", col.names = c("School Name", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T) %>% row_spec(c(17), bold = T)
+
+
+
+table <- elem %>%
+  group_by(School = school) %>%
+  summarise("Total" = n()) %>%
+  arrange(desc(Total)) %>% 
+  adorn_totals("row") %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns() 
+
+
+kable(table, caption= "Elementary Schools (K-5)", col.names = c("School Name", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T) %>% row_spec(c(9), bold = T)
+
+
+table <- middle %>%
+  group_by(School = school) %>%
+  summarise("Total" = n()) %>%
+  arrange(desc(Total)) %>% 
+  adorn_totals("row") %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns() 
+
+
+kable(table, caption= "Middle Schools (6-8)", col.names = c("School Name", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T) %>% row_spec(c(7), bold = T)
+
+table <- hs %>%
+  group_by(School = school) %>%
+  summarise("Total" = n()) %>%
+  arrange(desc(Total)) %>% 
+  adorn_totals("row") %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns() 
+
+
+kable(table, caption= "High Schools (9-12)", col.names = c("School Name", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T) %>% row_spec(c(6), bold = T)
+
+
+data %>%
+   group_by(school) %>%
+  summarise("Total" = n()) %>% 
+  ggplot(aes(school, Total,group= school)) +
+  geom_col(aes(x= reorder(school, Total)), fill = "#AA0000") +
+  scale_y_continuous(breaks = c(0,25,50,75,100,125,150,175)) +
+  labs(x = "School", 
+       y = "Number of Students") + coord_flip() + theme(legend.position = "none")
+```
+
+# SUYI Student Demographics 
+
+```{r}
+# Students' Sex
+table <- data %>%
+  group_by(suyi) %>% 
+   count("Sex" = sex ) %>%
+   adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns()
+
+kable(table, caption = "Students' Sex", col.names = c("Group","Sex", "Percent (Total)"))%>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T) 
+
+data %>% 
+ggplot(aes(x= reorder(sex, primary_language,function(x)length(x)), fill= suyi)) + geom_bar(position = "dodge") + scale_fill_manual(values=c("black","#AA0000", name="Group")) + coord_flip() + labs(x= "Sex", fill = "Group")
+```
+
+```{r}
+# Students' Race
+table <- data %>%
+   count("Racial Identity" = race, sort = T ) %>%
+   adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns()
+
+kable(table, caption = "Students' Racial Identity", col.names = c("Racial Identity", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T)
+
+data %>% 
+ggplot(aes(x= reorder(race, primary_language,function(x)length(x)))) + geom_bar(position = "dodge", fill = "black") + coord_flip() + labs(x= "Racial Identity")
+```
+
+```{r}
+# Students' Primary Language
+table <- data %>%
+   filter(primary_language != "English") %>% 
+   count("Primary Language" = primary_language, sort = T) %>%
+  filter(n >= 8) %>% 
+   adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting() %>%
+  adorn_ns()
+
+kable(table, caption = "Students' Primary Language (Ten most spoken)", col.names = c("Primary Language", "Percent (Total)")) %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T)
+
+data %>% 
+  filter(primary_language != "English") %>% 
+ggplot(aes(x= reorder(primary_language, primary_language,function(x)length(x)))) + geom_bar(position = "dodge", fill = "#AA0000") + scale_fill_manual(values=c("black","#AA0000", name="Group")) + coord_flip() + labs(x= "Primary Language") + scale_y_continuous(breaks = c(0, 25, 50, 75, 100, 125, 150))
+```
+
+```{r}
+# Number of Bilingual Student 
+table <- data %>% 
+  summarise(
+    "n" = sum(bilingual),
+    "Percent Bilingual" = round((n/n())*100,2))
+
+kable(table, caption = "Bilingual Students", col.names = c("Total", "Percent"), full_width = F) %>% kable_styling(full_width = F, bootstrap_options = "responsive", position = "left", fixed_thead = T)
+
+waffle(bilingual, rows=5, size=0.5, 
+       colors = c("#AA0000", "black"),
+       title="Percent of Bilingual Students", 
+       xlab="1 square = 1 Percent")
+```
+
+```{r}
+# Number of Students Experiencing Homelessness
+table <- data %>% 
+  summarise(
+    "n" = sum(as.numeric(homeless)),
+    "Percent Homeless" = round((n/n())*100,2),
+  )
+kable(table, caption = "Students Experiencing Homelessness", col.names = c("Total", "Percent"), full_width = F) %>% kable_styling(full_width = F, bootstrap_options = "responsive", position = "left", fixed_thead = T)
+
+waffle(homeless, rows=5, size=0.5, 
+       colors = c("#AA0000", "black"),
+       title="Percent of Students Experiencing Homelessness", 
+       xlab="1 square = 1 Percent")
+```
+
+---
+
+# SUYI Absenteeism  
+
+```{r}
+table <- data %>% 
+  summarise(
+    "Min" = min(days_absent),
+    "Median" = median(days_absent),
+    "Mean" = mean(days_absent),
+    "Max" = max(days_absent))
+
+kable(table, caption = "School Absenteeism", full_width = F) %>% kable_styling(full_width = F, bootstrap_options = "responsive", position = "left", fixed_thead = T)
+
+data %>% 
+  ggplot(aes(reorder(school, days_absent, FUN = median), days_absent)) + geom_boxplot(fill = "grey90") + coord_flip() + labs(x = "School", y = "Days Absent")
+
+```
+
+```{r}
+#Elementary Attendance 
+
+table <- elem %>% 
+  group_by("School" = school) %>%
+  summarise(
+    "Min" = min(days_absent),
+    "Median" = median(days_absent),
+    "Mean" = mean(days_absent),
+    "Max" = max(days_absent))%>% 
+  arrange(desc(Median))
+
+kable(table, caption = "Elementary School Absenteeism") %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T)
+
+elem %>% 
+  ggplot(aes(reorder(school, days_absent, FUN = median), days_absent)) + geom_boxplot(fill = "#4F95DB") + coord_flip() + labs(x = "School", y = "Days Absent")
+```
+
+```{r}
+#Middle School Attendance 
+
+table <- middle %>% 
+  group_by("School" = school) %>%
+  summarise(
+    "Min" = min(days_absent),
+    "Median" = median(days_absent),
+    "Mean" = mean(days_absent),
+    "Max" = max(days_absent))%>% 
+  arrange(desc(Median))
+
+kable(table, caption = "Middle School Absenteeism") %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T)
+
+middle %>% 
+  ggplot(aes(reorder(school, days_absent, FUN = median), days_absent)) + geom_boxplot(fill = "#DBA14F") + coord_flip() + labs(x = "School", y = "Days Absent")
+```
+
+```{r}
+#High School Attendance 
+
+table <- hs %>% 
+  group_by("School" = school) %>%
+  summarise(
+    "Min" = min(days_absent),
+    "Median" = median(days_absent),
+    "Mean" = mean(days_absent),
+    "Max" = max(days_absent)) %>% 
+  arrange(desc(Median))
+
+kable(table, caption = "High School Absenteeism") %>% kable_styling(full_width = T, bootstrap_options = c("striped", "responsive"), position = "left", fixed_thead = T)
+
+hs %>% 
+  ggplot(aes(reorder(school, days_absent, FUN = median), days_absent)) + geom_boxplot(fill = "#2ca25f") + coord_flip() + labs(x = "School", y = "Days Absent")
+```
+
+---
+
+# MAP Growth Rasch UnIT (RIT) Scores 
+```{r, warning=F}
+#Average Math and Reading RIT by Grade Level 
+df_long %>% 
+  group_by(subject, semester, grade_level) %>% 
+  summarise(y= mean(rit_score, na.rm = T)) %>% 
+  ggplot(aes(semester, y, color = subject, group = subject)) + scale_color_manual(values=c("black", "#AA0000")) + labs(title= "Average Math and Reading RIT Score by Grade Level" ,x = "Semester", y = "Average Score") + geom_point() + geom_line() + facet_wrap(~grade_level)
+```
+
+```{r, warning=F}
+#Average RIT Score by Sex
+df_long %>% 
+  group_by(subject, semester, sex) %>% 
+  summarise(y= mean(rit_score, na.rm = T)) %>% 
+  ggplot(aes(semester, y, color = subject, group = subject)) + scale_color_manual(values=c("black", "#AA0000")) + labs(title= "Average Math and Reading RIT Score by Grade Level" ,x = "Semester", y = "Average Score") + geom_point() + geom_line() + facet_wrap(~sex)
+```
+
+```{r, warning=F}
+#Average RIT Score by Race
+df_long %>% 
+  group_by(subject, semester, race) %>% 
+  summarise(y= mean(rit_score, na.rm = T)) %>% 
+  ggplot(aes(semester, y, color = subject, group = subject)) + scale_color_manual(values=c("black", "#AA0000")) + labs(title= "Average Math and Reading RIT Score by Race", caption = "n < 5 for Japanese, Alaska Native, Asian Indian, Korean, Samoan, and Cambodian", x = "Semester", y = "Average Score") + geom_point() + geom_line() + facet_wrap(~race)
+```
+
+```{r, eval= FALSE}
+#RIT Math Growth 
+elem %>% 
+  filter(!is.na(math_growth)) %>% 
+  ggplot(aes(reorder(school, math_growth, FUN = median), math_growth, fill = school)) + geom_boxplot()  + labs(x = "School", y = "Math Growth") + coord_flip() + scale_fill_brewer(palette="RdBu")
+ 
+```
+ 
+---
+
+# RIT Growth Plots
+
+## Reading 
+
+### Elementary Schools
+```{r, warning = FALSE}
+# Elementary Reading Dumbbell Plot 
+ggplot(elem_mean_reading, aes(x=mean_fall_reading, xend=mean_spring_reading, y=school)) + geom_segment(aes(x=150, 
+                         xend=250, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Reading Score", y="School", 
+             title="Elementary Fall to Spring Average RIT Reading Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(elem_mean_reading, school == "Valley Elementary"), aes(x=mean_fall_reading, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = 2)) +
+geom_text(data=filter(elem_mean_reading, school == "Valley Elementary"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_reading, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text(data=elem_mean_reading, aes(x=mean_fall_reading, y=school, label=round(mean_fall_reading,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width = 2)) +
+geom_text(data=elem_mean_reading, color="black", size=2.75, vjust=2.5,
+          aes(x=mean_spring_reading, y=school, label=round(mean_spring_reading,2)), position = position_dodge(width = 2)) +
+  geom_rect(data=elem_mean_reading, aes(xmin=230, xmax=250, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=elem_mean_reading, aes(label=paste0(round(mean_reading_diff,2)), y=school, x=240), fontface="bold", size=3) +
+geom_text(data= filter(elem_mean_reading, school == "Valley Elementary"), 
+            aes(x=240, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(150, 250)) + scale_y_discrete(expand=c(0.2,0))
+```
+ 
+### Middle Schools
+```{r}
+#Middle Reading Dumbbell Plot 
+ggplot(middle_mean_reading, aes(x=mean_fall_reading, xend=mean_spring_reading, y=school)) + geom_segment(aes(x=150, 
+                         xend=250, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Reading Score", y="School", 
+             title="Middle School Fall to Spring Average RIT Reading Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(middle_mean_reading, school == "Sound View Middle School"), aes(x=mean_fall_reading, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = .5)) +
+geom_text(data=filter(middle_mean_reading, school == "Sound View Middle School"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_reading, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text_repel(data=middle_mean_reading, aes(x=mean_fall_reading, y=school, label=round(mean_fall_reading,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width = .5)) +
+geom_text_repel(data=middle_mean_reading, color="black", size=2.75, vjust=-1,
+          aes(x=mean_spring_reading, y=school, label=round(mean_spring_reading,2))) +
+  geom_rect(data=middle_mean_reading, aes(xmin=230, xmax=250, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=middle_mean_reading, aes(label=paste0(round(mean_reading_diff,2)), y=school, x=240), fontface="bold", size=3) +
+geom_text(data= filter(middle_mean_reading, school == "Sound View Middle School"), 
+            aes(x=240, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(150, 250)) + scale_y_discrete(expand=c(0.2,0))
+```
+ 
+### High Schools 
+```{r}
+#High School Reading Dumbbell Plot 
+ggplot(hs_mean_reading, aes(x=mean_fall_reading, xend=mean_spring_reading, y=school)) + geom_segment(aes(x=150, 
+                         xend=250, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Reading Score", y="School", 
+             title="High School Fall to Spring Average RIT Reading Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(hs_mean_reading, school == "Olympic High School"), aes(x=mean_fall_reading, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = 2)) +
+geom_text(data=filter(hs_mean_reading, school == "Olympic High School"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_reading, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text(data=hs_mean_reading, aes(x=mean_fall_reading, y=school, label=round(mean_fall_reading,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width=.5)) +
+geom_text(data=hs_mean_reading, color="black", size=2.75, vjust=-1,
+          aes(x=mean_spring_reading, y=school, label=round(mean_spring_reading,2)), position = position_dodge(width=1)) +
+  geom_rect(data=hs_mean_reading, aes(xmin=230, xmax=250, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=hs_mean_reading, aes(label=paste0(round(mean_reading_diff,2)), y=school, x=240), fontface="bold", size=3) +
+geom_text(data= filter(hs_mean_reading, school == "Olympic High School"), 
+            aes(x=240, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(150, 250)) + scale_y_discrete(expand=c(0.2,0))
+```
+
+
+## Math
+
+### Elementary Schools
+```{r, warning = FALSE}
+# Elementary Math Dumbbell Plot 
+ggplot(elem_mean_math, aes(x=mean_fall_math, xend=mean_spring_math, y=school)) + geom_segment(aes(x=150, 
+                         xend=250, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Math Score", y="School", 
+             title="Elementary Fall to Spring Average RIT Math Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(elem_mean_math, school == "Lincoln Elementary"), aes(x=mean_fall_math, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = 2)) +
+geom_text(data=filter(elem_mean_math, school == "Lincoln Elementary"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_math, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text(data=elem_mean_math, aes(x=mean_fall_math, y=school, label=round(mean_fall_math,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width = 2)) +
+geom_text(data=elem_mean_math, color="black", size=2.75, vjust=2.5,
+          aes(x=mean_spring_math, y=school, label=round(mean_spring_math,2)), position = position_dodge(width = 2)) +
+  geom_rect(data=elem_mean_math, aes(xmin=230, xmax=250, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=elem_mean_math, aes(label=paste0(round(mean_math_diff,2)), y=school, x=240), fontface="bold", size=3) +
+geom_text(data= filter(elem_mean_math, school == "Lincoln Elementary"), 
+            aes(x=240, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(150, 250)) + scale_y_discrete(expand=c(0.2,0))
+```
+ 
+### Middle Schools
+```{r, warning = FALSE}
+#Middle Math Dumbbell Plot 
+ggplot(middle_mean_math, aes(x=mean_fall_math, xend=mean_spring_math, y=school)) + geom_segment(aes(x=175, 
+                         xend=275, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Math Score", y="School", 
+             title="Middle School Fall to Spring Average RIT Math Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(middle_mean_math, school == "Union Middle School"), aes(x=mean_fall_math, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = 2)) +
+geom_text(data=filter(middle_mean_math, school == "Union Middle School"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_math, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text_repel(data=middle_mean_math, aes(x=mean_fall_math, y=school, label=round(mean_fall_math,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width = 2)) +
+geom_text_repel(data=middle_mean_math, color="black", size=2.75, vjust=-1,
+          aes(x=mean_spring_math, y=school, label=round(mean_spring_math,2)), position = position_dodge(width = 2)) +
+  geom_rect(data=middle_mean_math, aes(xmin=250, xmax=275, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=middle_mean_math, aes(label=paste0(round(mean_math_diff,2)), y=school, x=260), fontface="bold", size=3) +
+geom_text(data= filter(middle_mean_math, school == "Union Middle School"), 
+            aes(x=260, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(175, 275)) + scale_y_discrete(expand=c(0.2,0))
+```
+ 
+### High Schools 
+```{r}
+#High School Math Dumbbell Plot 
+ggplot(hs_mean_math, aes(x=mean_fall_math, xend=mean_spring_math, y=school)) + geom_segment(aes(x=175, 
+                         xend=275, 
+                         y=school, 
+                         yend=school), 
+                     color="grey90", size=1)+
+        geom_dumbbell(color="black", 
+                      size_x=3.5, 
+                      size_xend = 3.5,
+                      colour_x="black", 
+                      colour_xend = "#AA0000")+
+        labs(x="Math Score", y="School", 
+             title="High School Fall to Spring Average RIT Math Scores", 
+             caption="2014 School year") +
+    geom_text(data=filter(hs_mean_math, school == "Olympic High School"), aes(x=mean_fall_math, y=school, label="Fall"),
+          color="black", size=2.75, vjust=-2.5, position = position_dodge(width = 2)) +
+geom_text(data=filter(hs_mean_math, school == "Olympic High School"), color="#AA0000", size=2.75, vjust=-2.5,
+          aes(x=mean_spring_math, y=school, label="Spring"), position = position_dodge(width = 2)) +
+  geom_text(data=hs_mean_math, aes(x=mean_fall_math, y=school, label=round(mean_fall_math,2)),
+          color="black", size=2.75, vjust=2.5, position = position_dodge(width=.5)) +
+geom_text(data=hs_mean_math, color="black", size=2.75, vjust=-1,
+          aes(x=mean_spring_math, y=school, label=round(mean_spring_math,2)), position = position_dodge(width=1)) +
+  geom_rect(data=hs_mean_math, aes(xmin=250, xmax=275, ymin=-Inf, ymax=Inf), fill="grey90") +
+geom_text(data=hs_mean_math, aes(label=paste0(round(mean_math_diff,2)), y=school, x=260), fontface="bold", size=3) +
+geom_text(data= filter(hs_mean_math, school == "Olympic High School"), 
+            aes(x=260, y=school, label="Growth Index"),
+            color="black", size=3.1, vjust=-3, fontface="bold") + scale_x_continuous(expand=c(0,0), limits=c(175, 275)) + scale_y_discrete(expand=c(0.2,0))
+```
+
+
