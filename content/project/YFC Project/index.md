@@ -1,5 +1,6 @@
 ---
-title: Youth Film Collaborative- Using Youth Participatory Action Research, Art and Collective Action to Address Community Issues
+title: Youth Film Collaborative
+subtitle: Using Youth Participatory Action Research, Art and Collective Action to Address Community Issues
 author: Foster, J.L.
 date: '2015-05-03'
 slug: youth-films-collaborative

@@ -1,0 +1,1248 @@
+--- 
+title: "State University Youth Initiative District"
+author: "James Lamar Foster, Ph.D. Candidate"
+date: "March 4, 2021"
+summary: Visualization of the graduation rate of two similar high schools
+tags:
+- Visualization
+- School Outcomes
+image:
+  caption: Photo by  Element5 Digital
+  focal_point: Smart
+--- 
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<hr />
+<div id="key-takeaways" class="section level1">
+<h1>Key Takeaways</h1>
+<ol style="list-style-type: decimal">
+<li><p>Youth Initiative District students make steady gains in reading and math in elementary and middle school but tend to regress in high school.</p></li>
+<li><p>On average, Youth Initiative District students miss 12 days of instruction. Most of the absenteeism is occurring at the high school level.</p></li>
+<li><p>Male students of color in high school are experiencing the lowest amount of RIT math growth.</p></li>
+</ol>
+</div>
+<div id="summary-of-findings" class="section level1">
+<h1>Summary of Findings</h1>
+<p>The State University Youth Initiative District (SUYI) is comprised of 881 students across 16 schools consisting of elementary, middle, and high school students. SUYI is rich in diversity; there are 13 different races/ethnicities, over 10 primary languages, and a host of other characteristics that make this a rich community of students. Unfortunately, many SUYI students struggle with absenteeism and declining MAP Growth Rasch UnIT (RIT) scores.</p>
+<p>A student is considered “chronically absent” when they miss 10% or more days of instruction in one academic school year (Childs &amp; Lofton, 2021). Chronic absenteeism can lead to students missing important instructional time, ultimately causing students to fall behind in their academics. Furthermore, when students miss school, they also miss important social interaction times that develop their interpersonal skills. According to this analysis, SUYI students miss an average of 12 days of instruction, which is about 7% of the school year in Washington State. High School students make up for the majority of the days missed, with New Futures Alternative, Cascade High School, and Olympic High School having the highest median of absenteeism (20-48 missed days). On the other hand, elementary school students account for the least amount of absences. Horizon, Franklin, and Valley Elementary have the lowest amount of students missing school (4-6 missed days).</p>
+<p>RIT scores range from about 100–300. According to Joi Converse (2016), third-grade students usually score at the 180–200 level and progress to the 220–260 level by high school. SUYI elementary students fall within the usual RIT score range and make considerable gains in middle school. However, gains begin to slow down and in some cases regress for high school students. Declines in math RIT scores occurred from fall to winter for high school students, particularly male students of color. Most of these declines may be coming from Cascade High School and New Futures Alternative. In terms of actual scores, the average high school reading and math score was below 220. More specifically, the average spring RIT score in math was below 220.</p>
+<p>Based on this analysis, more attention needs to be given to male high school students of color with a primary focus on their math achievement. However, that achievement may not improve if high school students continue to miss school. Further analysis should be done to measure the statistical significance of students missing school on their academic achievement and the characteristics of students who are missing school and performing low in math. Lastly, caution should be taken with how much emphasis is given to RIT scores. Several scholars have noted inherent bias and lack of cultural awareness in standardized tests.</p>
+<div id="references" class="section level4">
+<h4>References:</h4>
+<p>Childs, J., &amp; Lofton, R. (2021). Masking attendance: How education policy distracts from the wicked problem (s) of chronic absenteeism. Educational Policy, 35(2), 213-234.</p>
+<p>Converse, J. (2016, October 25). Six commonly used MAP Growth terms worth knowing. NWEA. <a href="https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/" class="uri">https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/</a></p>
+</div>
+</div>
+<div id="suyi-schools-and-students" class="section level1">
+<h1>SUYI Schools and Students</h1>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 1: </span>Total Number of Students in the State University Youth Initiative District
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Jackson High School
+</td>
+<td style="text-align:left;">
+18.5% (163)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Horizon Middle School
+</td>
+<td style="text-align:left;">
+17.9% (158)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lincoln Elementary
+</td>
+<td style="text-align:left;">
+15.9% (140)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Monroe Elementary
+</td>
+<td style="text-align:left;">
+8.2% (72)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+King K-8 School
+</td>
+<td style="text-align:left;">
+6.1% (54)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kennedy Elementary
+</td>
+<td style="text-align:left;">
+5.4% (48)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spring Crest Elementary
+</td>
+<td style="text-align:left;">
+5.4% (48)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valley Elementary
+</td>
+<td style="text-align:left;">
+5.2% (46)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21st Century K-8 School
+</td>
+<td style="text-align:left;">
+3.9% (34)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Future Alternative
+</td>
+<td style="text-align:left;">
+3.0% (26)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Johnson High School
+</td>
+<td style="text-align:left;">
+2.7% (24)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sound View Middle School
+</td>
+<td style="text-align:left;">
+2.6% (23)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Olympic High School
+</td>
+<td style="text-align:left;">
+1.6% (14)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Franklin Elementary
+</td>
+<td style="text-align:left;">
+1.5% (13)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cascade High School
+</td>
+<td style="text-align:left;">
+1.0% (9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Union Middle School
+</td>
+<td style="text-align:left;">
+1.0% (9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Total
+</td>
+<td style="text-align:left;font-weight: bold;">
+100.0% (881)
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 1: </span>Elementary Schools (K-5)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Lincoln Elementary
+</td>
+<td style="text-align:left;">
+33.3% (140)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Monroe Elementary
+</td>
+<td style="text-align:left;">
+17.1% (72)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kennedy Elementary
+</td>
+<td style="text-align:left;">
+11.4% (48)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spring Crest Elementary
+</td>
+<td style="text-align:left;">
+11.4% (48)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valley Elementary
+</td>
+<td style="text-align:left;">
+11.0% (46)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+King K-8 School
+</td>
+<td style="text-align:left;">
+7.6% (32)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21st Century K-8 School
+</td>
+<td style="text-align:left;">
+5.0% (21)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Franklin Elementary
+</td>
+<td style="text-align:left;">
+3.1% (13)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Total
+</td>
+<td style="text-align:left;font-weight: bold;">
+100.0% (420)
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 1: </span>Middle Schools (6-8)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Horizon Middle School
+</td>
+<td style="text-align:left;">
+69.3% (158)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sound View Middle School
+</td>
+<td style="text-align:left;">
+10.1% (23)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+King K-8 School
+</td>
+<td style="text-align:left;">
+9.6% (22)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21st Century K-8 School
+</td>
+<td style="text-align:left;">
+5.7% (13)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Union Middle School
+</td>
+<td style="text-align:left;">
+3.9% (9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Future Alternative
+</td>
+<td style="text-align:left;">
+1.3% (3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Total
+</td>
+<td style="text-align:left;font-weight: bold;">
+100.0% (228)
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 1: </span>High Schools (9-12)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Jackson High School
+</td>
+<td style="text-align:left;">
+70.0% (163)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Johnson High School
+</td>
+<td style="text-align:left;">
+10.3% (24)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Future Alternative
+</td>
+<td style="text-align:left;">
+9.9% (23)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Olympic High School
+</td>
+<td style="text-align:left;">
+6.0% (14)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cascade High School
+</td>
+<td style="text-align:left;">
+3.9% (9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Total
+</td>
+<td style="text-align:left;font-weight: bold;">
+100.0% (233)
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="suyi-student-demographics" class="section level1">
+<h1>SUYI Student Demographics</h1>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-9">Table 2: </span>Students’ Sex
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Group
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Sex
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SUYI
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:left;">
+35.9% (316)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SUYI
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:left;">
+38.5% (339)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SUYI-Focus
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:left;">
+13.2% (116)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SUYI-Focus
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:left;">
+12.5% (110)
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-10">Table 3: </span>Students’ Racial Identity
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Racial Identity
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+African American/Black
+</td>
+<td style="text-align:left;">
+48.8% (430)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chinese
+</td>
+<td style="text-align:left;">
+13.5% (119)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vietnamese
+</td>
+<td style="text-align:left;">
+11.5% (101)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:left;">
+11.0% (97)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other American Indian
+</td>
+<td style="text-align:left;">
+9.4% (83)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Filipino
+</td>
+<td style="text-align:left;">
+2.4% (21)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Other Asian
+</td>
+<td style="text-align:left;">
+1.8% (16)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Japanese
+</td>
+<td style="text-align:left;">
+0.5% (4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alaska Native
+</td>
+<td style="text-align:left;">
+0.3% (3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Asian Indian
+</td>
+<td style="text-align:left;">
+0.2% (2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Korean
+</td>
+<td style="text-align:left;">
+0.2% (2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Samoan
+</td>
+<td style="text-align:left;">
+0.2% (2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cambodian
+</td>
+<td style="text-align:left;">
+0.1% (1)
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-11">Table 4: </span>Students’ Primary Language (Ten most spoken)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Primary Language
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Percent (Total)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Somali
+</td>
+<td style="text-align:left;">
+25.2% (126)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spanish
+</td>
+<td style="text-align:left;">
+21.0% (105)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vietnamese
+</td>
+<td style="text-align:left;">
+18.0% (90)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cantonese
+</td>
+<td style="text-align:left;">
+14.8% (74)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oromo (Ethiopia)
+</td>
+<td style="text-align:left;">
+6.0% (30)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amharic
+</td>
+<td style="text-align:left;">
+4.2% (21)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Toishanese
+</td>
+<td style="text-align:left;">
+4.2% (21)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tigrinya (Tigrigna)
+</td>
+<td style="text-align:left;">
+2.6% (13)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mandarin
+</td>
+<td style="text-align:left;">
+2.4% (12)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tagalog
+</td>
+<td style="text-align:left;">
+1.6% (8)
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<table class="table table-responsive" style="width: auto !important; ">
+<caption>
+<span id="tab:unnamed-chunk-12">Table 5: </span>Bilingual Students
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Total
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+295
+</td>
+<td style="text-align:right;">
+33.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<table class="table table-responsive" style="width: auto !important; ">
+<caption>
+<span id="tab:unnamed-chunk-13">Table 6: </span>Students Experiencing Homelessness
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Total
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Percent
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:right;">
+6.81
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="suyi-absenteeism" class="section level1">
+<h1>SUYI Absenteeism</h1>
+<table class="table table-responsive" style="width: auto !important; ">
+<caption>
+<span id="tab:unnamed-chunk-14">Table 7: </span>School Absenteeism
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Min
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Median
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Mean
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+118
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-15">Table 8: </span>Elementary School Absenteeism
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Min
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Median
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Mean
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+King K-8 School
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8.5
+</td>
+<td style="text-align:right;">
+12.78
+</td>
+<td style="text-align:right;">
+67.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21st Century K-8 School
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+8.93
+</td>
+<td style="text-align:right;">
+23.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Monroe Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+7.0
+</td>
+<td style="text-align:right;">
+10.13
+</td>
+<td style="text-align:right;">
+68.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kennedy Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+7.88
+</td>
+<td style="text-align:right;">
+29.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lincoln Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+8.89
+</td>
+<td style="text-align:right;">
+38.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spring Crest Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+10.24
+</td>
+<td style="text-align:right;">
+57.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Franklin Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+5.42
+</td>
+<td style="text-align:right;">
+10.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valley Elementary
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+6.51
+</td>
+<td style="text-align:right;">
+36.0
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-16">Table 9: </span>Middle School Absenteeism
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Min
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Median
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Mean
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+New Future Alternative
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:right;">
+23.0
+</td>
+<td style="text-align:right;">
+21.67
+</td>
+<td style="text-align:right;">
+27.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Union Middle School
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+10.0
+</td>
+<td style="text-align:right;">
+20.39
+</td>
+<td style="text-align:right;">
+54.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+King K-8 School
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+10.57
+</td>
+<td style="text-align:right;">
+30.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sound View Middle School
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+6.5
+</td>
+<td style="text-align:right;">
+15.46
+</td>
+<td style="text-align:right;">
+66.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21st Century K-8 School
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+9.65
+</td>
+<td style="text-align:right;">
+26.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Horizon Middle School
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+5.5
+</td>
+<td style="text-align:right;">
+8.83
+</td>
+<td style="text-align:right;">
+59.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<table class="table table-striped table-responsive" style="">
+<caption>
+<span id="tab:unnamed-chunk-17">Table 10: </span>High School Absenteeism
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+School
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Min
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Median
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Mean
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+New Future Alternative
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+48.5
+</td>
+<td style="text-align:right;">
+47.8
+</td>
+<td style="text-align:right;">
+117.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cascade High School
+</td>
+<td style="text-align:right;">
+5.5
+</td>
+<td style="text-align:right;">
+36.5
+</td>
+<td style="text-align:right;">
+38.6
+</td>
+<td style="text-align:right;">
+103.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Olympic High School
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+20.5
+</td>
+<td style="text-align:right;">
+30.7
+</td>
+<td style="text-align:right;">
+94.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Johnson High School
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+13.2
+</td>
+<td style="text-align:right;">
+20.9
+</td>
+<td style="text-align:right;">
+70.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jackson High School
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+7.0
+</td>
+<td style="text-align:right;">
+14.4
+</td>
+<td style="text-align:right;">
+85.5
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="map-growth-rasch-unit-rit-scores" class="section level1">
+<h1>MAP Growth Rasch UnIT (RIT) Scores</h1>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="rit-growth-plots" class="section level1">
+<h1>RIT Growth Plots</h1>
+<div id="reading" class="section level2">
+<h2>Reading</h2>
+<div id="elementary-schools" class="section level3">
+<h3>Elementary Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+<div id="middle-schools" class="section level3">
+<h3>Middle Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="high-schools" class="section level3">
+<h3>High Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+</div>
+<div id="math" class="section level2">
+<h2>Math</h2>
+<div id="elementary-schools-1" class="section level3">
+<h3>Elementary Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+</div>
+<div id="middle-schools-1" class="section level3">
+<h3>Middle Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+<div id="high-schools-1" class="section level3">
+<h3>High Schools</h3>
+<p><img src="/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+</div>
+</div>
+</div>
