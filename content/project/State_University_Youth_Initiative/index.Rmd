@@ -244,7 +244,8 @@ Childs, J., & Lofton, R. (2021). Masking attendance: How education policy distra
 
 Converse, J. (2016, October 25). Six commonly used MAP Growth terms worth knowing. NWEA. https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/
 
-Note: all of the data in this project is fictitious 
+Note: all of the data in this project is fictitious. You can review the report [here](http://rpubs.com/jlfoster116/suyi) 
+
 # SUYI Schools and Students
 
 ```{r}
