@@ -2,7 +2,7 @@
 title: "State University Youth Initiative District"
 author: "James Lamar Foster, Ph.D. Candidate"
 date: "March 4, 2021"
-summary: Visualization of the graduation rate of two similar high schools
+summary: Evaluation of Youth Initiative
 tags:
 - Visualization
 - School Outcomes
