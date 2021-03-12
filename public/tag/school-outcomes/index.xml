@@ -90,8 +90,11 @@ plot_grid(B, G)&lt;/code&gt;&lt;/pre&gt;
 &lt;h4&gt;References:&lt;/h4&gt;
 &lt;p&gt;Childs, J., &amp;amp; Lofton, R. (2021). Masking attendance: How education policy distracts from the wicked problem (s) of chronic absenteeism. Educational Policy, 35(2), 213-234.&lt;/p&gt;
 &lt;p&gt;Converse, J. (2016, October 25). Six commonly used MAP Growth terms worth knowing. NWEA. &lt;a href=&#34;https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/&#34; class=&#34;uri&#34;&gt;https://www.nwea.org/blog/2016/six-commonly-used-map-growth-terms-worth-knowing/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Note: all of the data in this project is fictitious
-# SUYI Schools and Students&lt;/p&gt;
+&lt;p&gt;Note: all of the data in this project is fictitious. You can review the report &lt;a href=&#34;http://rpubs.com/jlfoster116/suyi&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suyi-schools-and-students&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;SUYI Schools and Students&lt;/h1&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-8&#34;&gt;Table 1: &lt;/span&gt;Total Number of Students in the State University Youth Initiative District
@@ -473,7 +476,6 @@ Total
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suyi-student-demographics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;SUYI Student Demographics&lt;/h1&gt;
