@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/publication/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication/</link>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Publications</title>
-      <link>https://jameslamarfoster.netlify.app/publication/</link>
+      <link>/publication/</link>
     </image>
     
     <item>
       <title>Leadership and SEL (Under Review)</title>
-      <link>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</link>
+      <link>/publication/caring-journal-article/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</guid>
+      <guid>/publication/caring-journal-article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Dashboard Implementation - A Review of the Research Literature</title>
-      <link>https://jameslamarfoster.netlify.app/publication/dashboard-report/</link>
+      <link>/publication/dashboard-report/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/dashboard-report/</guid>
+      <guid>/publication/dashboard-report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What the Research Shows - Building Ranks in Action</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nassp-book/</link>
+      <link>/publication/nassp-book/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nassp-book/</guid>
+      <guid>/publication/nassp-book/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network for School Improvement (NSI) Final Report - State of the Field</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nsi-report/</link>
+      <link>/publication/nsi-report/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nsi-report/</guid>
+      <guid>/publication/nsi-report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transparency of Funding for Fee-Based Programs</title>
-      <link>https://jameslamarfoster.netlify.app/publication/uw-funding/</link>
+      <link>/publication/uw-funding/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/uw-funding/</guid>
+      <guid>/publication/uw-funding/</guid>
       <description></description>
     </item>
     

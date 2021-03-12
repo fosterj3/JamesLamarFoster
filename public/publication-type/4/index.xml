@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4 | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/publication-type/4/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication-type/4/</link>
+      <atom:link href="/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
     <description>4</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>4</title>
-      <link>https://jameslamarfoster.netlify.app/publication-type/4/</link>
+      <link>/publication-type/4/</link>
     </image>
     
     <item>
       <title>Data Dashboard Implementation - A Review of the Research Literature</title>
-      <link>https://jameslamarfoster.netlify.app/publication/dashboard-report/</link>
+      <link>/publication/dashboard-report/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/dashboard-report/</guid>
+      <guid>/publication/dashboard-report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network for School Improvement (NSI) Final Report - State of the Field</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nsi-report/</link>
+      <link>/publication/nsi-report/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nsi-report/</guid>
+      <guid>/publication/nsi-report/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transparency of Funding for Fee-Based Programs</title>
-      <link>https://jameslamarfoster.netlify.app/publication/uw-funding/</link>
+      <link>/publication/uw-funding/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/uw-funding/</guid>
+      <guid>/publication/uw-funding/</guid>
       <description></description>
     </item>
     

@@ -2,34 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evaluation | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/tag/evaluation/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/tag/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/evaluation/</link>
+      <atom:link href="/tag/evaluation/index.xml" rel="self" type="application/rss+xml" />
     <description>Evaluation</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Evaluation</title>
-      <link>https://jameslamarfoster.netlify.app/tag/evaluation/</link>
+      <link>/tag/evaluation/</link>
     </image>
     
     <item>
-      <title>PowerTeach-ing Evaluation</title>
-      <link>https://jameslamarfoster.netlify.app/project/powerteaching/</link>
-      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/project/powerteaching/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Decades of research suggests that students of lower socioeconomic status (SES) and students of color obtain lower math scores than their peers (Anyon, 1980; Lubienski, 2002; Strutchens &amp;amp; Silver, 2000). To ameliorate this problem, several reforms have been designed and implemented. One of the several reforms has been PowerTeaching. This study seeks to evaluate the effectiveness of PowerTeaching to raise math scores for students of color in low SES. The results from this study indicate that PowerTeaching did not yield significant results in raising students’ math scores.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>State University Youth Initiative District</title>
-      <link>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</guid>
+      <link>/project/state_university_youth_initiative/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/state_university_youth_initiative/</guid>
       <description> 
 
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;hr /&gt;
@@ -436,7 +426,7 @@ Total
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suyi-student-demographics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;SUYI Student Demographics&lt;/h1&gt;
@@ -504,7 +494,7 @@ Male
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-10&#34;&gt;Table 3: &lt;/span&gt;Students’ Racial Identity
@@ -626,7 +616,7 @@ Cambodian
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-11&#34;&gt;Table 4: &lt;/span&gt;Students’ Primary Language (Ten most spoken)
@@ -724,7 +714,7 @@ Tagalog
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-12&#34;&gt;Table 5: &lt;/span&gt;Bilingual Students
@@ -750,7 +740,7 @@ Percent
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-13&#34;&gt;Table 6: &lt;/span&gt;Students Experiencing Homelessness
@@ -776,7 +766,7 @@ Percent
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suyi-absenteeism&#34; class=&#34;section level1&#34;&gt;
@@ -818,7 +808,7 @@ Max
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-15&#34;&gt;Table 8: &lt;/span&gt;Elementary School Absenteeism
@@ -981,7 +971,7 @@ Valley Elementary
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-16&#34;&gt;Table 9: &lt;/span&gt;Middle School Absenteeism
@@ -1110,7 +1100,7 @@ Horizon Middle School
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-17&#34;&gt;Table 10: &lt;/span&gt;High School Absenteeism
@@ -1222,14 +1212,14 @@ Jackson High School
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;map-growth-rasch-unit-rit-scores&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;MAP Growth Rasch UnIT (RIT) Scores&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;rit-growth-plots&#34; class=&#34;section level1&#34;&gt;
@@ -1238,33 +1228,43 @@ Jackson High School
 &lt;h2&gt;Reading&lt;/h2&gt;
 &lt;div id=&#34;elementary-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Elementary Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;middle-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Middle Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;high-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;High Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;math&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Math&lt;/h2&gt;
 &lt;div id=&#34;elementary-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Elementary Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;middle-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Middle Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;high-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;High Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PowerTeach-ing Evaluation</title>
+      <link>/project/powerteaching/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/project/powerteaching/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Decades of research suggests that students of lower socioeconomic status (SES) and students of color obtain lower math scores than their peers (Anyon, 1980; Lubienski, 2002; Strutchens &amp;amp; Silver, 2000). To ameliorate this problem, several reforms have been designed and implemented. One of the several reforms has been PowerTeaching. This study seeks to evaluate the effectiveness of PowerTeaching to raise math scores for students of color in low SES. The results from this study indicate that PowerTeaching did not yield significant results in raising students’ math scores.&lt;/p&gt;
 </description>
     </item>
     

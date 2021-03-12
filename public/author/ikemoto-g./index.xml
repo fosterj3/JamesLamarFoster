@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ikemoto, G. | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/author/ikemoto-g./</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/author/ikemoto-g./index.xml" rel="self" type="application/rss+xml" />
+    <link>/author/ikemoto-g./</link>
+      <atom:link href="/author/ikemoto-g./index.xml" rel="self" type="application/rss+xml" />
     <description>Ikemoto, G.</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Ikemoto, G.</title>
-      <link>https://jameslamarfoster.netlify.app/author/ikemoto-g./</link>
+      <link>/author/ikemoto-g./</link>
     </image>
     
     <item>
       <title>What the Research Shows - Building Ranks in Action</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nassp-book/</link>
+      <link>/publication/nassp-book/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nassp-book/</guid>
+      <guid>/publication/nassp-book/</guid>
       <description></description>
     </item>
     

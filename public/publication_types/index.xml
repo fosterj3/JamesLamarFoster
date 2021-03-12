@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/publication_types/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/</link>
+      <atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Publication_types</title>
-      <link>https://jameslamarfoster.netlify.app/publication_types/</link>
+      <link>/publication_types/</link>
     </image>
     
   </channel>

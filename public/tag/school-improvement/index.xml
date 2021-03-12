@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>School Improvement | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/tag/school-improvement/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/tag/school-improvement/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/school-improvement/</link>
+      <atom:link href="/tag/school-improvement/index.xml" rel="self" type="application/rss+xml" />
     <description>School Improvement</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>School Improvement</title>
-      <link>https://jameslamarfoster.netlify.app/tag/school-improvement/</link>
+      <link>/tag/school-improvement/</link>
     </image>
     
     <item>
       <title>Network for School Improvement (NSI) Final Report - State of the Field</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nsi-report/</link>
+      <link>/publication/nsi-report/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nsi-report/</guid>
+      <guid>/publication/nsi-report/</guid>
       <description></description>
     </item>
     

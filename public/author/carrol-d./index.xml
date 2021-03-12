@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Carrol, D. | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/author/carrol-d./</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/author/carrol-d./index.xml" rel="self" type="application/rss+xml" />
+    <link>/author/carrol-d./</link>
+      <atom:link href="/author/carrol-d./index.xml" rel="self" type="application/rss+xml" />
     <description>Carrol, D.</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Carrol, D.</title>
-      <link>https://jameslamarfoster.netlify.app/author/carrol-d./</link>
+      <link>/author/carrol-d./</link>
     </image>
     
     <item>
       <title>Network for School Improvement (NSI) Final Report - State of the Field</title>
-      <link>https://jameslamarfoster.netlify.app/publication/nsi-report/</link>
+      <link>/publication/nsi-report/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/nsi-report/</guid>
+      <guid>/publication/nsi-report/</guid>
       <description></description>
     </item>
     

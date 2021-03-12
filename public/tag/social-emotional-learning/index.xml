@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Social-emotional learning | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/tag/social-emotional-learning/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/tag/social-emotional-learning/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/social-emotional-learning/</link>
+      <atom:link href="/tag/social-emotional-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Social-emotional learning</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Social-emotional learning</title>
-      <link>https://jameslamarfoster.netlify.app/tag/social-emotional-learning/</link>
+      <link>/tag/social-emotional-learning/</link>
     </image>
     
     <item>
       <title>Leadership and SEL (Under Review)</title>
-      <link>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</link>
+      <link>/publication/caring-journal-article/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/caring-journal-article/</guid>
+      <guid>/publication/caring-journal-article/</guid>
       <description></description>
     </item>
     

@@ -2,192 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visualization | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/tag/visualization/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/tag/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/visualization/</link>
+      <atom:link href="/tag/visualization/index.xml" rel="self" type="application/rss+xml" />
     <description>Visualization</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Visualization</title>
-      <link>https://jameslamarfoster.netlify.app/tag/visualization/</link>
+      <link>/tag/visualization/</link>
     </image>
     
     <item>
-      <title>Washington state Department of Education COVID-19 Communication</title>
-      <link>https://jameslamarfoster.netlify.app/project/making_timelines/</link>
-      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/project/making_timelines/</guid>
-      <description>
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/vis/vis.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/vis/vis.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/timeline/timevis.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/timevis-binding/timevis.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
-&lt;link href=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/bootstrap/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/bootstrap/js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/bootstrap/shim/html5shiv.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/bootstrap/shim/respond.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;In this project, I made two timelines with the same data using two different timline packages - timevis and vistime. On this website I only show the vistime timeline due to compatability issues.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(timevis)
-library(vistime)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create Dataframe of timeline
-
-Date &amp;lt;-  as.Date(c(&amp;quot;2020-02-26&amp;quot;, &amp;quot;2020-02-28&amp;quot;, &amp;quot;2020-03-03&amp;quot;, &amp;quot;2020-03-06&amp;quot;, &amp;quot;2020-03-13&amp;quot;, &amp;quot;2020-03-17&amp;quot;, &amp;quot;2020-03-18&amp;quot;, &amp;quot;2020-03-20&amp;quot;, &amp;quot;2020-03-23&amp;quot;, &amp;quot;2020-03-23&amp;quot;, &amp;quot;2020-04-06&amp;quot;, &amp;quot;2020-04-07&amp;quot;, &amp;quot;2020-04-08&amp;quot;, &amp;quot;2020-04-15&amp;quot;, &amp;quot;2020-04-21&amp;quot;, &amp;quot;2020-04-27&amp;quot;, &amp;quot;2020-03-03&amp;quot;))
-
-Source &amp;lt;- c(&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;, &amp;#39;Northshore School District&amp;#39;)
-
-Title &amp;lt;- c(&amp;#39;Letter to Superintendents&amp;#39;, 
-          &amp;#39;Preparation for COVID-19 Outbreak&amp;#39;, 
-          &amp;#39;Further COVID-19 Guidance&amp;#39;, 
-          &amp;#39;Online Learning Guidance&amp;#39;,
-          &amp;#39;Guidance for Long-term School Closures #1&amp;#39;, 
-          &amp;#39;Superintendents and Labor Leaders Letter&amp;#39;, 
-          &amp;#39;Guidance LSC #2&amp;#39;, 
-          &amp;#39;Guidance LSC #3&amp;#39;, 
-          &amp;#39;Guidance LSC #4&amp;#39;, 
-          &amp;#39;Guidance LSC #5&amp;#39;, 
-          &amp;#39;Continuous Learning 2020&amp;#39;, 
-          &amp;#39;Inclusionary Practices Doc&amp;#39;, 
-          &amp;#39;Guidance LSC #6&amp;#39;, 
-          &amp;#39;Guidance LSC #7&amp;#39;, 
-          &amp;#39;Student Learning &amp;amp; Grading Guidance&amp;#39;, 
-          &amp;#39;Supporting English Learners&amp;#39;,
-          &amp;#39;Staff remote learning PD&amp;#39;)
-
-df &amp;lt;- data.frame(Date, Source, Title)
-
-df1 &amp;lt;- df %&amp;gt;% 
-  arrange(Date)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create timeline with timevis
-df2 &amp;lt;- data.frame(
-  id = 1:17,
-  content = c(&amp;#39;Letter to Superintendents&amp;#39;, 
-          &amp;#39;Preparation for COVID-19 Outbreak&amp;#39;, 
-          &amp;#39;Further COVID-19 Guidance&amp;#39;, 
-          &amp;#39;Online Learning Guidance&amp;#39;,
-          &amp;#39;Guidance for Long-term School Closures #1&amp;#39;, 
-          &amp;#39;Superintendents and Labor Leaders Letter&amp;#39;, 
-          &amp;#39;Guidance LSC #2&amp;#39;, 
-          &amp;#39;Guidance LSC #3&amp;#39;, 
-          &amp;#39;Guidance LSC #4&amp;#39;, 
-          &amp;#39;Guidance LSC #5&amp;#39;, 
-          &amp;#39;Continuous Learning 2020&amp;#39;, 
-          &amp;#39;Inclusionary Practices Doc&amp;#39;, 
-          &amp;#39;Guidance LSC #6&amp;#39;, 
-          &amp;#39;Guidance LSC #7&amp;#39;, 
-          &amp;#39;Student Learning &amp;amp; Grading Guidance&amp;#39;, 
-          &amp;#39;Supporting English Learners&amp;#39;,
-          &amp;#39;Staff remote learning PD&amp;#39;),
-  start = c(&amp;quot;2020-02-26&amp;quot;, 
-            &amp;quot;2020-02-28&amp;quot;, 
-            &amp;quot;2020-03-03&amp;quot;, 
-            &amp;quot;2020-03-06&amp;quot;, 
-            &amp;quot;2020-03-13&amp;quot;, 
-            &amp;quot;2020-03-17&amp;quot;, 
-            &amp;quot;2020-03-18&amp;quot;, 
-            &amp;quot;2020-03-20&amp;quot;, 
-            &amp;quot;2020-03-23&amp;quot;, 
-            &amp;quot;2020-03-23&amp;quot;, 
-            &amp;quot;2020-04-06&amp;quot;, 
-            &amp;quot;2020-04-07&amp;quot;, 
-            &amp;quot;2020-04-08&amp;quot;, 
-            &amp;quot;2020-04-15&amp;quot;, 
-            &amp;quot;2020-04-21&amp;quot;, 
-            &amp;quot;2020-04-27&amp;quot;, 
-            &amp;quot;2020-03-03&amp;quot;),
-  end = c(NA),
-  options = list(editable = T, height = &amp;quot;200px&amp;quot;)
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;timevis(df2)&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-1&#34; class=&#34;timevis html-widget&#34; style=&#34;width:672px;height:480px;&#34;&gt;
-&lt;div class=&#34;btn-group zoom-menu&#34;&gt;
-&lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-lg zoom-in&#34; title=&#34;Zoom in&#34;&gt;+&lt;/button&gt;
-&lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-lg zoom-out&#34; title=&#34;Zoom out&#34;&gt;-&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;items&#34;:[{&#34;id&#34;:&#34;1&#34;,&#34;content&#34;:&#34;Letter to Superintendents&#34;,&#34;start&#34;:&#34;2020-02-26&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;2&#34;,&#34;content&#34;:&#34;Preparation for COVID-19 Outbreak&#34;,&#34;start&#34;:&#34;2020-02-28&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;3&#34;,&#34;content&#34;:&#34;Further COVID-19 Guidance&#34;,&#34;start&#34;:&#34;2020-03-03&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;4&#34;,&#34;content&#34;:&#34;Online Learning Guidance&#34;,&#34;start&#34;:&#34;2020-03-06&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;5&#34;,&#34;content&#34;:&#34;Guidance for Long-term School Closures #1&#34;,&#34;start&#34;:&#34;2020-03-13&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;6&#34;,&#34;content&#34;:&#34;Superintendents and Labor Leaders Letter&#34;,&#34;start&#34;:&#34;2020-03-17&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;7&#34;,&#34;content&#34;:&#34;Guidance LSC #2&#34;,&#34;start&#34;:&#34;2020-03-18&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;8&#34;,&#34;content&#34;:&#34;Guidance LSC #3&#34;,&#34;start&#34;:&#34;2020-03-20&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;9&#34;,&#34;content&#34;:&#34;Guidance LSC #4&#34;,&#34;start&#34;:&#34;2020-03-23&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;10&#34;,&#34;content&#34;:&#34;Guidance LSC #5&#34;,&#34;start&#34;:&#34;2020-03-23&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;11&#34;,&#34;content&#34;:&#34;Continuous Learning 2020&#34;,&#34;start&#34;:&#34;2020-04-06&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;12&#34;,&#34;content&#34;:&#34;Inclusionary Practices Doc&#34;,&#34;start&#34;:&#34;2020-04-07&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;13&#34;,&#34;content&#34;:&#34;Guidance LSC #6&#34;,&#34;start&#34;:&#34;2020-04-08&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;14&#34;,&#34;content&#34;:&#34;Guidance LSC #7&#34;,&#34;start&#34;:&#34;2020-04-15&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;15&#34;,&#34;content&#34;:&#34;Student Learning &amp; Grading Guidance&#34;,&#34;start&#34;:&#34;2020-04-21&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;16&#34;,&#34;content&#34;:&#34;Supporting English Learners&#34;,&#34;start&#34;:&#34;2020-04-27&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;17&#34;,&#34;content&#34;:&#34;Staff remote learning PD&#34;,&#34;start&#34;:&#34;2020-03-03&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;}],&#34;groups&#34;:null,&#34;showZoom&#34;:true,&#34;zoomFactor&#34;:0.5,&#34;fit&#34;:true,&#34;options&#34;:[],&#34;height&#34;:null,&#34;api&#34;:[]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create timeline using vistime 
-df3 &amp;lt;-  data.frame(event = Title, start = Date, group = Source)
-
-vistime(df3, title = &amp;quot;Washington State COVID-19 Response Timeline&amp;quot;,  optimize_y = F, show_labels = F)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: `arrange_()` is deprecated as of dplyr 0.7.0.
-## Please use `arrange()` instead.
-## See vignette(&amp;#39;programming&amp;#39;) for more help
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;175e34bd671e2&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;175e34bd671e2&#34;,&#34;attrs&#34;:{&#34;175e34bd671e2&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;},&#34;175e34bd671e2.1&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-02-25 16:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.2&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-02 18:24:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.3&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-08 21:48:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.4&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-15 00:12:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.5&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-21 02:36:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.6&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-27 05:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.7&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-02 07:24:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.8&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-08 09:48:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.9&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-14 12:12:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.10&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-20 14:36:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.11&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-26 17:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.12&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:2,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(166,166,166,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.13&#34;:{&#34;mode&#34;:&#34;markers&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-27 16:00:00&#34;,&#34;2020-03-02 16:00:00&#34;,&#34;2020-03-05 16:00:00&#34;,&#34;2020-03-12 17:00:00&#34;,&#34;2020-03-16 17:00:00&#34;,&#34;2020-03-17 17:00:00&#34;,&#34;2020-03-19 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-04-05 17:00:00&#34;,&#34;2020-04-06 17:00:00&#34;,&#34;2020-04-07 17:00:00&#34;,&#34;2020-04-14 17:00:00&#34;,&#34;2020-04-20 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;,&#34;2020-03-02 16:00:00&#34;],&#34;y&#34;:[18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,1],&#34;marker&#34;:{&#34;color&#34;:[&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;,&#34;#B3DE69&#34;,&#34;#FCCDE5&#34;,&#34;#D9D9D9&#34;,&#34;#BC80BD&#34;,&#34;#CCEBC5&#34;,&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;],&#34;size&#34;:15,&#34;symbol&#34;:&#34;circle&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;black&#34;,&#34;width&#34;:1}},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;text&#34;:[&#34;&lt;b&gt;Letter to Superintendents: 2020-02-25 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Preparation for COVID-19 Outbreak: 2020-02-27 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Further COVID-19 Guidance: 2020-03-02 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Online Learning Guidance: 2020-03-05 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance for Long-term School Closures #1: 2020-03-12 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Superintendents and Labor Leaders Letter: 2020-03-16 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #2: 2020-03-17 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #3: 2020-03-19 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #4: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #5: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Continuous Learning 2020: 2020-04-05 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Inclusionary Practices Doc: 2020-04-06 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #6: 2020-04-07 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #7: 2020-04-14 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Student Learning &amp; Grading Guidance: 2020-04-20 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Supporting English Learners: 2020-04-26 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Staff remote learning PD: 2020-03-02 16:00:00&lt;\/b&gt;&#34;],&#34;inherit&#34;:true}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:208,&#34;t&#34;:25,&#34;r&#34;:10},&#34;hovermode&#34;:&#34;closest&#34;,&#34;title&#34;:&#34;Washington State COVID-19 Response Timeline&#34;,&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;showgrid&#34;:false,&#34;title&#34;:&#34;&#34;},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;showgrid&#34;:false,&#34;title&#34;:&#34;&#34;,&#34;tickmode&#34;:&#34;array&#34;,&#34;tickvals&#34;:[10.5,1],&#34;ticktext&#34;:[&#34;OSPI&#34;,&#34;Northshore School District&#34;]},&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-25 16:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-02 18:24:00&#34;,&#34;2020-03-02 18:24:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-08 21:48:00&#34;,&#34;2020-03-08 21:48:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-15 00:12:00&#34;,&#34;2020-03-15 00:12:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-21 02:36:00&#34;,&#34;2020-03-21 02:36:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-27 05:00:00&#34;,&#34;2020-03-27 05:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-02 07:24:00&#34;,&#34;2020-04-02 07:24:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-08 09:48:00&#34;,&#34;2020-04-08 09:48:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-14 12:12:00&#34;,&#34;2020-04-14 12:12:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-20 14:36:00&#34;,&#34;2020-04-20 14:36:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-26 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:[2,2],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(166,166,166,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;markers&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-27 16:00:00&#34;,&#34;2020-03-02 16:00:00&#34;,&#34;2020-03-05 16:00:00&#34;,&#34;2020-03-12 17:00:00&#34;,&#34;2020-03-16 17:00:00&#34;,&#34;2020-03-17 17:00:00&#34;,&#34;2020-03-19 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-04-05 17:00:00&#34;,&#34;2020-04-06 17:00:00&#34;,&#34;2020-04-07 17:00:00&#34;,&#34;2020-04-14 17:00:00&#34;,&#34;2020-04-20 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;,&#34;2020-03-02 16:00:00&#34;],&#34;y&#34;:[18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,1],&#34;marker&#34;:{&#34;color&#34;:[&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;,&#34;#B3DE69&#34;,&#34;#FCCDE5&#34;,&#34;#D9D9D9&#34;,&#34;#BC80BD&#34;,&#34;#CCEBC5&#34;,&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;],&#34;size&#34;:15,&#34;symbol&#34;:&#34;circle&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;black&#34;,&#34;width&#34;:1}},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;],&#34;text&#34;:[&#34;&lt;b&gt;Letter to Superintendents: 2020-02-25 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Preparation for COVID-19 Outbreak: 2020-02-27 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Further COVID-19 Guidance: 2020-03-02 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Online Learning Guidance: 2020-03-05 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance for Long-term School Closures #1: 2020-03-12 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Superintendents and Labor Leaders Letter: 2020-03-16 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #2: 2020-03-17 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #3: 2020-03-19 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #4: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #5: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Continuous Learning 2020: 2020-04-05 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Inclusionary Practices Doc: 2020-04-06 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #6: 2020-04-07 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #7: 2020-04-14 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Student Learning &amp; Grading Guidance: 2020-04-20 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Supporting English Learners: 2020-04-26 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Staff remote learning PD: 2020-03-02 16:00:00&lt;\/b&gt;&#34;],&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;line&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>4-Year Graduation Rate of Two High Schools</title>
-      <link>https://jameslamarfoster.netlify.app/project/graduation-markdown/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/project/graduation-markdown/</guid>
-      <description>
-
-
-&lt;p&gt;I used public secondary data to visualize the difference in 4-year graduation rate for males and females attending two two similar high schools in the Pacific Northwest. Before creating these plots I combined five different data frames (years 2015-2019) of high school graduation in the entire state of Washington. After combining the data frames, I wrangled the data using dplyr from the tidyverse package in R. After filtering the dataframe to only capture my desired observations, I then used ggplot2 to create the graph, gganimate to animate the plots, and cowplot to make a multipanel plot of the two plots for ease of comparison.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Packages I will use to graph the data
-library(tidyverse)
-library(ggrepel)
-library(scales)
-library(gganimate)
-library(cowplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Reading in Data
-WAGrad15 &amp;lt;- read_csv(&amp;quot;WAGrad14-15.csv&amp;quot;)
-WAGrad16 &amp;lt;- read_csv(&amp;quot;WAGrad15-16.csv&amp;quot;)
-WAGrad17 &amp;lt;- read_csv(&amp;quot;WAGrad16-17.csv&amp;quot;)
-WAGrad18 &amp;lt;- read_csv(&amp;quot;WAGrad17-18.csv&amp;quot;)
-WAGrad19 &amp;lt;- read_csv(&amp;quot;WAGrad18-19.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WAGrad &amp;lt;- bind_rows(WAGrad15, WAGrad16, WAGrad17, WAGrad18, WAGrad19)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Using dplyr to wrangle the data to the exct data I want to graph
- ###I did several other filters witht this data
-GBHS &amp;lt;- filter(SPS_Cut4, SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;, &amp;quot;Garfield High School&amp;quot;), StudentGroupType %in% c(&amp;quot;Race&amp;quot;, &amp;quot;Gender&amp;quot;, &amp;quot;All&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Garfield and Ballard Overall Graduation Rate 
-GBHS_Overall &amp;lt;- filter(GBHS, StudentGroupType %in% c(&amp;quot;All&amp;quot;, &amp;quot;Gender&amp;quot;))
-
-##Ballard High School
-BHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))
-
-##Garfield High School 
-GHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Garfield High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
-ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() +  transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-10-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
-ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-11-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;G &amp;lt;- ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(0,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= NULL, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(axis.title.y=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.y=element_blank())&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;B &amp;lt;- ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = &amp;quot;none&amp;quot;, legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(panel.border = element_blank())&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Multipanel Graph with Cowplot
-plot_grid(B, G)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>State University Youth Initiative District</title>
-      <link>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/project/state_university_youth_initiative/</guid>
+      <link>/project/state_university_youth_initiative/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/state_university_youth_initiative/</guid>
       <description> 
 
-&lt;script src=&#34;https://jameslamarfoster.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;hr /&gt;
@@ -594,7 +426,7 @@ Total
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suyi-student-demographics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;SUYI Student Demographics&lt;/h1&gt;
@@ -662,7 +494,7 @@ Male
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-10&#34;&gt;Table 3: &lt;/span&gt;Students’ Racial Identity
@@ -784,7 +616,7 @@ Cambodian
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-11&#34;&gt;Table 4: &lt;/span&gt;Students’ Primary Language (Ten most spoken)
@@ -882,7 +714,7 @@ Tagalog
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-12&#34;&gt;Table 5: &lt;/span&gt;Bilingual Students
@@ -908,7 +740,7 @@ Percent
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-responsive&#34; style=&#34;width: auto !important; &#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-13&#34;&gt;Table 6: &lt;/span&gt;Students Experiencing Homelessness
@@ -934,7 +766,7 @@ Percent
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suyi-absenteeism&#34; class=&#34;section level1&#34;&gt;
@@ -976,7 +808,7 @@ Max
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-15&#34;&gt;Table 8: &lt;/span&gt;Elementary School Absenteeism
@@ -1139,7 +971,7 @@ Valley Elementary
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-16&#34;&gt;Table 9: &lt;/span&gt;Middle School Absenteeism
@@ -1268,7 +1100,7 @@ Horizon Middle School
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-responsive&#34; style=&#34;&#34;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:unnamed-chunk-17&#34;&gt;Table 10: &lt;/span&gt;High School Absenteeism
@@ -1380,14 +1212,14 @@ Jackson High School
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;map-growth-rasch-unit-rit-scores&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;MAP Growth Rasch UnIT (RIT) Scores&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;rit-growth-plots&#34; class=&#34;section level1&#34;&gt;
@@ -1396,33 +1228,201 @@ Jackson High School
 &lt;h2&gt;Reading&lt;/h2&gt;
 &lt;div id=&#34;elementary-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Elementary Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;middle-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Middle Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;high-schools&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;High Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;math&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Math&lt;/h2&gt;
 &lt;div id=&#34;elementary-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Elementary Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;middle-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Middle Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;high-schools-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;High Schools&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jameslamarfoster.netlify.app/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/State_University_Youth_Initiative/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Washington state Department of Education COVID-19 Communication</title>
+      <link>/project/making_timelines/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      <guid>/project/making_timelines/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/vis/vis.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/vis/vis.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/timeline/timevis.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/timevis-binding/timevis.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/bootstrap/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/bootstrap/js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/bootstrap/shim/html5shiv.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/bootstrap/shim/respond.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-main/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;In this project, I made two timelines with the same data using two different timline packages - timevis and vistime. On this website I only show the vistime timeline due to compatability issues.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(timevis)
+library(vistime)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create Dataframe of timeline
+
+Date &amp;lt;-  as.Date(c(&amp;quot;2020-02-26&amp;quot;, &amp;quot;2020-02-28&amp;quot;, &amp;quot;2020-03-03&amp;quot;, &amp;quot;2020-03-06&amp;quot;, &amp;quot;2020-03-13&amp;quot;, &amp;quot;2020-03-17&amp;quot;, &amp;quot;2020-03-18&amp;quot;, &amp;quot;2020-03-20&amp;quot;, &amp;quot;2020-03-23&amp;quot;, &amp;quot;2020-03-23&amp;quot;, &amp;quot;2020-04-06&amp;quot;, &amp;quot;2020-04-07&amp;quot;, &amp;quot;2020-04-08&amp;quot;, &amp;quot;2020-04-15&amp;quot;, &amp;quot;2020-04-21&amp;quot;, &amp;quot;2020-04-27&amp;quot;, &amp;quot;2020-03-03&amp;quot;))
+
+Source &amp;lt;- c(&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;,&amp;quot;OSPI&amp;quot;, &amp;#39;Northshore School District&amp;#39;)
+
+Title &amp;lt;- c(&amp;#39;Letter to Superintendents&amp;#39;, 
+          &amp;#39;Preparation for COVID-19 Outbreak&amp;#39;, 
+          &amp;#39;Further COVID-19 Guidance&amp;#39;, 
+          &amp;#39;Online Learning Guidance&amp;#39;,
+          &amp;#39;Guidance for Long-term School Closures #1&amp;#39;, 
+          &amp;#39;Superintendents and Labor Leaders Letter&amp;#39;, 
+          &amp;#39;Guidance LSC #2&amp;#39;, 
+          &amp;#39;Guidance LSC #3&amp;#39;, 
+          &amp;#39;Guidance LSC #4&amp;#39;, 
+          &amp;#39;Guidance LSC #5&amp;#39;, 
+          &amp;#39;Continuous Learning 2020&amp;#39;, 
+          &amp;#39;Inclusionary Practices Doc&amp;#39;, 
+          &amp;#39;Guidance LSC #6&amp;#39;, 
+          &amp;#39;Guidance LSC #7&amp;#39;, 
+          &amp;#39;Student Learning &amp;amp; Grading Guidance&amp;#39;, 
+          &amp;#39;Supporting English Learners&amp;#39;,
+          &amp;#39;Staff remote learning PD&amp;#39;)
+
+df &amp;lt;- data.frame(Date, Source, Title)
+
+df1 &amp;lt;- df %&amp;gt;% 
+  arrange(Date)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create timeline with timevis
+df2 &amp;lt;- data.frame(
+  id = 1:17,
+  content = c(&amp;#39;Letter to Superintendents&amp;#39;, 
+          &amp;#39;Preparation for COVID-19 Outbreak&amp;#39;, 
+          &amp;#39;Further COVID-19 Guidance&amp;#39;, 
+          &amp;#39;Online Learning Guidance&amp;#39;,
+          &amp;#39;Guidance for Long-term School Closures #1&amp;#39;, 
+          &amp;#39;Superintendents and Labor Leaders Letter&amp;#39;, 
+          &amp;#39;Guidance LSC #2&amp;#39;, 
+          &amp;#39;Guidance LSC #3&amp;#39;, 
+          &amp;#39;Guidance LSC #4&amp;#39;, 
+          &amp;#39;Guidance LSC #5&amp;#39;, 
+          &amp;#39;Continuous Learning 2020&amp;#39;, 
+          &amp;#39;Inclusionary Practices Doc&amp;#39;, 
+          &amp;#39;Guidance LSC #6&amp;#39;, 
+          &amp;#39;Guidance LSC #7&amp;#39;, 
+          &amp;#39;Student Learning &amp;amp; Grading Guidance&amp;#39;, 
+          &amp;#39;Supporting English Learners&amp;#39;,
+          &amp;#39;Staff remote learning PD&amp;#39;),
+  start = c(&amp;quot;2020-02-26&amp;quot;, 
+            &amp;quot;2020-02-28&amp;quot;, 
+            &amp;quot;2020-03-03&amp;quot;, 
+            &amp;quot;2020-03-06&amp;quot;, 
+            &amp;quot;2020-03-13&amp;quot;, 
+            &amp;quot;2020-03-17&amp;quot;, 
+            &amp;quot;2020-03-18&amp;quot;, 
+            &amp;quot;2020-03-20&amp;quot;, 
+            &amp;quot;2020-03-23&amp;quot;, 
+            &amp;quot;2020-03-23&amp;quot;, 
+            &amp;quot;2020-04-06&amp;quot;, 
+            &amp;quot;2020-04-07&amp;quot;, 
+            &amp;quot;2020-04-08&amp;quot;, 
+            &amp;quot;2020-04-15&amp;quot;, 
+            &amp;quot;2020-04-21&amp;quot;, 
+            &amp;quot;2020-04-27&amp;quot;, 
+            &amp;quot;2020-03-03&amp;quot;),
+  end = c(NA),
+  options = list(editable = T, height = &amp;quot;200px&amp;quot;)
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;timevis(df2)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-1&#34; class=&#34;timevis html-widget&#34; style=&#34;width:672px;height:480px;&#34;&gt;
+&lt;div class=&#34;btn-group zoom-menu&#34;&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-lg zoom-in&#34; title=&#34;Zoom in&#34;&gt;+&lt;/button&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-lg zoom-out&#34; title=&#34;Zoom out&#34;&gt;-&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;items&#34;:[{&#34;id&#34;:&#34;1&#34;,&#34;content&#34;:&#34;Letter to Superintendents&#34;,&#34;start&#34;:&#34;2020-02-26&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;2&#34;,&#34;content&#34;:&#34;Preparation for COVID-19 Outbreak&#34;,&#34;start&#34;:&#34;2020-02-28&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;3&#34;,&#34;content&#34;:&#34;Further COVID-19 Guidance&#34;,&#34;start&#34;:&#34;2020-03-03&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;4&#34;,&#34;content&#34;:&#34;Online Learning Guidance&#34;,&#34;start&#34;:&#34;2020-03-06&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;5&#34;,&#34;content&#34;:&#34;Guidance for Long-term School Closures #1&#34;,&#34;start&#34;:&#34;2020-03-13&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;6&#34;,&#34;content&#34;:&#34;Superintendents and Labor Leaders Letter&#34;,&#34;start&#34;:&#34;2020-03-17&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;7&#34;,&#34;content&#34;:&#34;Guidance LSC #2&#34;,&#34;start&#34;:&#34;2020-03-18&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;8&#34;,&#34;content&#34;:&#34;Guidance LSC #3&#34;,&#34;start&#34;:&#34;2020-03-20&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;9&#34;,&#34;content&#34;:&#34;Guidance LSC #4&#34;,&#34;start&#34;:&#34;2020-03-23&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;10&#34;,&#34;content&#34;:&#34;Guidance LSC #5&#34;,&#34;start&#34;:&#34;2020-03-23&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;11&#34;,&#34;content&#34;:&#34;Continuous Learning 2020&#34;,&#34;start&#34;:&#34;2020-04-06&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;12&#34;,&#34;content&#34;:&#34;Inclusionary Practices Doc&#34;,&#34;start&#34;:&#34;2020-04-07&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;13&#34;,&#34;content&#34;:&#34;Guidance LSC #6&#34;,&#34;start&#34;:&#34;2020-04-08&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;14&#34;,&#34;content&#34;:&#34;Guidance LSC #7&#34;,&#34;start&#34;:&#34;2020-04-15&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;15&#34;,&#34;content&#34;:&#34;Student Learning &amp; Grading Guidance&#34;,&#34;start&#34;:&#34;2020-04-21&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;16&#34;,&#34;content&#34;:&#34;Supporting English Learners&#34;,&#34;start&#34;:&#34;2020-04-27&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;},{&#34;id&#34;:&#34;17&#34;,&#34;content&#34;:&#34;Staff remote learning PD&#34;,&#34;start&#34;:&#34;2020-03-03&#34;,&#34;options.editable&#34;:&#34;TRUE&#34;,&#34;options.height&#34;:&#34;200px&#34;}],&#34;groups&#34;:null,&#34;showZoom&#34;:true,&#34;zoomFactor&#34;:0.5,&#34;fit&#34;:true,&#34;options&#34;:[],&#34;height&#34;:null,&#34;api&#34;:[]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Create timeline using vistime 
+df3 &amp;lt;-  data.frame(event = Title, start = Date, group = Source)
+
+vistime(df3, title = &amp;quot;Washington State COVID-19 Response Timeline&amp;quot;,  optimize_y = F, show_labels = F)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: `arrange_()` is deprecated as of dplyr 0.7.0.
+## Please use `arrange()` instead.
+## See vignette(&amp;#39;programming&amp;#39;) for more help
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;visdat&#34;:{&#34;175e34bd671e2&#34;:[&#34;function () &#34;,&#34;plotlyVisDat&#34;]},&#34;cur_data&#34;:&#34;175e34bd671e2&#34;,&#34;attrs&#34;:{&#34;175e34bd671e2&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;},&#34;175e34bd671e2.1&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-02-25 16:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.2&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-02 18:24:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.3&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-08 21:48:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.4&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-15 00:12:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.5&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-21 02:36:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.6&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-03-27 05:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.7&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-02 07:24:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.8&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-08 09:48:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.9&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-14 12:12:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.10&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-20 14:36:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.11&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:&#34;2020-04-26 17:00:00&#34;,&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.12&#34;:{&#34;mode&#34;:&#34;lines&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:2,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(166,166,166,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;none&#34;,&#34;inherit&#34;:true},&#34;175e34bd671e2.13&#34;:{&#34;mode&#34;:&#34;markers&#34;,&#34;alpha_stroke&#34;:1,&#34;sizes&#34;:[10,100],&#34;spans&#34;:[1,20],&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-27 16:00:00&#34;,&#34;2020-03-02 16:00:00&#34;,&#34;2020-03-05 16:00:00&#34;,&#34;2020-03-12 17:00:00&#34;,&#34;2020-03-16 17:00:00&#34;,&#34;2020-03-17 17:00:00&#34;,&#34;2020-03-19 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-04-05 17:00:00&#34;,&#34;2020-04-06 17:00:00&#34;,&#34;2020-04-07 17:00:00&#34;,&#34;2020-04-14 17:00:00&#34;,&#34;2020-04-20 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;,&#34;2020-03-02 16:00:00&#34;],&#34;y&#34;:[18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,1],&#34;marker&#34;:{&#34;color&#34;:[&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;,&#34;#B3DE69&#34;,&#34;#FCCDE5&#34;,&#34;#D9D9D9&#34;,&#34;#BC80BD&#34;,&#34;#CCEBC5&#34;,&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;],&#34;size&#34;:15,&#34;symbol&#34;:&#34;circle&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;black&#34;,&#34;width&#34;:1}},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:&#34;text&#34;,&#34;text&#34;:[&#34;&lt;b&gt;Letter to Superintendents: 2020-02-25 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Preparation for COVID-19 Outbreak: 2020-02-27 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Further COVID-19 Guidance: 2020-03-02 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Online Learning Guidance: 2020-03-05 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance for Long-term School Closures #1: 2020-03-12 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Superintendents and Labor Leaders Letter: 2020-03-16 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #2: 2020-03-17 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #3: 2020-03-19 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #4: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #5: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Continuous Learning 2020: 2020-04-05 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Inclusionary Practices Doc: 2020-04-06 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #6: 2020-04-07 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #7: 2020-04-14 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Student Learning &amp; Grading Guidance: 2020-04-20 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Supporting English Learners: 2020-04-26 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Staff remote learning PD: 2020-03-02 16:00:00&lt;\/b&gt;&#34;],&#34;inherit&#34;:true}},&#34;layout&#34;:{&#34;margin&#34;:{&#34;b&#34;:40,&#34;l&#34;:208,&#34;t&#34;:25,&#34;r&#34;:10},&#34;hovermode&#34;:&#34;closest&#34;,&#34;title&#34;:&#34;Washington State COVID-19 Response Timeline&#34;,&#34;xaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;showgrid&#34;:false,&#34;title&#34;:&#34;&#34;},&#34;yaxis&#34;:{&#34;domain&#34;:[0,1],&#34;automargin&#34;:true,&#34;showgrid&#34;:false,&#34;title&#34;:&#34;&#34;,&#34;tickmode&#34;:&#34;array&#34;,&#34;tickvals&#34;:[10.5,1],&#34;ticktext&#34;:[&#34;OSPI&#34;,&#34;Northshore School District&#34;]},&#34;showlegend&#34;:false},&#34;source&#34;:&#34;A&#34;,&#34;config&#34;:{&#34;showSendToCloud&#34;:false},&#34;data&#34;:[{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-25 16:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-02 18:24:00&#34;,&#34;2020-03-02 18:24:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-08 21:48:00&#34;,&#34;2020-03-08 21:48:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-15 00:12:00&#34;,&#34;2020-03-15 00:12:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(148,103,189,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-21 02:36:00&#34;,&#34;2020-03-21 02:36:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(140,86,75,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-03-27 05:00:00&#34;,&#34;2020-03-27 05:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(227,119,194,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-02 07:24:00&#34;,&#34;2020-04-02 07:24:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(127,127,127,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-08 09:48:00&#34;,&#34;2020-04-08 09:48:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(188,189,34,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-14 12:12:00&#34;,&#34;2020-04-14 12:12:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(23,190,207,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-20 14:36:00&#34;,&#34;2020-04-20 14:36:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(31,119,180,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-04-26 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:[0,19],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(229,229,229,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(255,127,14,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;lines&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-04-26 17:00:00&#34;],&#34;y&#34;:[2,2],&#34;line&#34;:{&#34;color&#34;:&#34;rgba(166,166,166,1)&#34;},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;none&#34;,&#34;none&#34;],&#34;marker&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;}},&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(44,160,44,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null},{&#34;mode&#34;:&#34;markers&#34;,&#34;type&#34;:&#34;scatter&#34;,&#34;x&#34;:[&#34;2020-02-25 16:00:00&#34;,&#34;2020-02-27 16:00:00&#34;,&#34;2020-03-02 16:00:00&#34;,&#34;2020-03-05 16:00:00&#34;,&#34;2020-03-12 17:00:00&#34;,&#34;2020-03-16 17:00:00&#34;,&#34;2020-03-17 17:00:00&#34;,&#34;2020-03-19 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-03-22 17:00:00&#34;,&#34;2020-04-05 17:00:00&#34;,&#34;2020-04-06 17:00:00&#34;,&#34;2020-04-07 17:00:00&#34;,&#34;2020-04-14 17:00:00&#34;,&#34;2020-04-20 17:00:00&#34;,&#34;2020-04-26 17:00:00&#34;,&#34;2020-03-02 16:00:00&#34;],&#34;y&#34;:[18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,1],&#34;marker&#34;:{&#34;color&#34;:[&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;,&#34;#B3DE69&#34;,&#34;#FCCDE5&#34;,&#34;#D9D9D9&#34;,&#34;#BC80BD&#34;,&#34;#CCEBC5&#34;,&#34;#8DD3C7&#34;,&#34;#FFFFB3&#34;,&#34;#BEBADA&#34;,&#34;#FB8072&#34;,&#34;#80B1D3&#34;,&#34;#FDB462&#34;],&#34;size&#34;:15,&#34;symbol&#34;:&#34;circle&#34;,&#34;line&#34;:{&#34;color&#34;:&#34;black&#34;,&#34;width&#34;:1}},&#34;showlegend&#34;:false,&#34;hoverinfo&#34;:[&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;,&#34;text&#34;],&#34;text&#34;:[&#34;&lt;b&gt;Letter to Superintendents: 2020-02-25 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Preparation for COVID-19 Outbreak: 2020-02-27 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Further COVID-19 Guidance: 2020-03-02 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Online Learning Guidance: 2020-03-05 16:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance for Long-term School Closures #1: 2020-03-12 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Superintendents and Labor Leaders Letter: 2020-03-16 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #2: 2020-03-17 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #3: 2020-03-19 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #4: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #5: 2020-03-22 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Continuous Learning 2020: 2020-04-05 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Inclusionary Practices Doc: 2020-04-06 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #6: 2020-04-07 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Guidance LSC #7: 2020-04-14 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Student Learning &amp; Grading Guidance: 2020-04-20 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Supporting English Learners: 2020-04-26 17:00:00&lt;\/b&gt;&#34;,&#34;&lt;b&gt;Staff remote learning PD: 2020-03-02 16:00:00&lt;\/b&gt;&#34;],&#34;error_y&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;error_x&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;line&#34;:{&#34;color&#34;:&#34;rgba(214,39,40,1)&#34;},&#34;xaxis&#34;:&#34;x&#34;,&#34;yaxis&#34;:&#34;y&#34;,&#34;frame&#34;:null}],&#34;highlight&#34;:{&#34;on&#34;:&#34;plotly_click&#34;,&#34;persistent&#34;:false,&#34;dynamic&#34;:false,&#34;selectize&#34;:false,&#34;opacityDim&#34;:0.2,&#34;selected&#34;:{&#34;opacity&#34;:1},&#34;debounce&#34;:0},&#34;shinyEvents&#34;:[&#34;plotly_hover&#34;,&#34;plotly_click&#34;,&#34;plotly_selected&#34;,&#34;plotly_relayout&#34;,&#34;plotly_brushed&#34;,&#34;plotly_brushing&#34;,&#34;plotly_clickannotation&#34;,&#34;plotly_doubleclick&#34;,&#34;plotly_deselect&#34;,&#34;plotly_afterplot&#34;,&#34;plotly_sunburstclick&#34;],&#34;base_url&#34;:&#34;https://plot.ly&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>4-Year Graduation Rate of Two High Schools</title>
+      <link>/project/graduation-markdown/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/project/graduation-markdown/</guid>
+      <description>
+
+
+&lt;p&gt;I used public secondary data to visualize the difference in 4-year graduation rate for males and females attending two two similar high schools in the Pacific Northwest. Before creating these plots I combined five different data frames (years 2015-2019) of high school graduation in the entire state of Washington. After combining the data frames, I wrangled the data using dplyr from the tidyverse package in R. After filtering the dataframe to only capture my desired observations, I then used ggplot2 to create the graph, gganimate to animate the plots, and cowplot to make a multipanel plot of the two plots for ease of comparison.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Packages I will use to graph the data
+library(tidyverse)
+library(ggrepel)
+library(scales)
+library(gganimate)
+library(cowplot)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Reading in Data
+WAGrad15 &amp;lt;- read_csv(&amp;quot;WAGrad14-15.csv&amp;quot;)
+WAGrad16 &amp;lt;- read_csv(&amp;quot;WAGrad15-16.csv&amp;quot;)
+WAGrad17 &amp;lt;- read_csv(&amp;quot;WAGrad16-17.csv&amp;quot;)
+WAGrad18 &amp;lt;- read_csv(&amp;quot;WAGrad17-18.csv&amp;quot;)
+WAGrad19 &amp;lt;- read_csv(&amp;quot;WAGrad18-19.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WAGrad &amp;lt;- bind_rows(WAGrad15, WAGrad16, WAGrad17, WAGrad18, WAGrad19)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Using dplyr to wrangle the data to the exct data I want to graph
+ ###I did several other filters witht this data
+GBHS &amp;lt;- filter(SPS_Cut4, SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;, &amp;quot;Garfield High School&amp;quot;), StudentGroupType %in% c(&amp;quot;Race&amp;quot;, &amp;quot;Gender&amp;quot;, &amp;quot;All&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Garfield and Ballard Overall Graduation Rate 
+GBHS_Overall &amp;lt;- filter(GBHS, StudentGroupType %in% c(&amp;quot;All&amp;quot;, &amp;quot;Gender&amp;quot;))
+
+##Ballard High School
+BHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Ballard High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))
+
+##Garfield High School 
+GHS_Overall &amp;lt;- filter(GBHS,SchoolName %in% c(&amp;quot;Garfield High School&amp;quot;),  StudentGroupType %in% c(&amp;quot;Gender&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
+ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() +  transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-10-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;##Animated Graduation rate for Ballard High School
+ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(.9,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_blank(), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + transition_reveal(SchoolYear)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-11-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;G &amp;lt;- ggplot(GHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = c(0,.9),legend.justification=  c(&amp;quot;center&amp;quot;,&amp;quot;top&amp;quot;), legend.title= element_blank(),legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= NULL, title = &amp;quot;Garfield High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;B &amp;lt;- ggplot(BHS_Overall, aes(x=SchoolYear, y=GraduationRate, color=StudentGroup)) + geom_line()  + theme(legend.position = &amp;quot;none&amp;quot;, legend.key = element_blank(),legend.box.background = element_rect(color=&amp;quot;black&amp;quot;, size=.5), strip.background = element_rect(fill=NA, color=NA),panel.background = element_blank(),panel.grid.major = element_line(color = &amp;quot;grey&amp;quot;, size = 0.1), panel.grid.minor= element_blank(), panel.spacing.x=unit(.7, &amp;quot;lines&amp;quot;), panel.spacing.y=unit(.5, &amp;quot;lines&amp;quot;)) + labs(x=&amp;quot;\nGraduation Year&amp;quot;, y= &amp;quot;Graduation Rate Percentage\n&amp;quot;, title = &amp;quot;Ballard High School&amp;quot;) + scale_y_continuous(labels= percent_format(accuracy = 1),limits = c(.80,1)) + scale_color_manual(values = c(&amp;quot;red4&amp;quot;, &amp;quot;navy&amp;quot;)) + geom_point() + theme(panel.border = element_blank())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Multipanel Graph with Cowplot
+plot_grid(B, G)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/project/Graduation-Markdown/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

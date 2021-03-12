@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Higher Education | James Lamar Foster</title>
-    <link>https://jameslamarfoster.netlify.app/tag/higher-education/</link>
-      <atom:link href="https://jameslamarfoster.netlify.app/tag/higher-education/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/higher-education/</link>
+      <atom:link href="/tag/higher-education/index.xml" rel="self" type="application/rss+xml" />
     <description>Higher Education</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jameslamarfoster.netlify.app/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hue1bf5cb2cb0f040263aa8336e8e6759d_14543_512x512_fill_lanczos_center_2.png</url>
       <title>Higher Education</title>
-      <link>https://jameslamarfoster.netlify.app/tag/higher-education/</link>
+      <link>/tag/higher-education/</link>
     </image>
     
     <item>
       <title>Transparency of Funding for Fee-Based Programs</title>
-      <link>https://jameslamarfoster.netlify.app/publication/uw-funding/</link>
+      <link>/publication/uw-funding/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://jameslamarfoster.netlify.app/publication/uw-funding/</guid>
+      <guid>/publication/uw-funding/</guid>
       <description></description>
     </item>
     
